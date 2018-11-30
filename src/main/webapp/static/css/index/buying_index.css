@@ -1,0 +1,178 @@
+﻿.buying-content h1{
+    border-bottom:3px solid #ba3344;
+    padding:0 0 5px 0;
+    margin:20px 0 0 0;
+    font-weight:bold;
+}
+.buying-content ul, .buying-content li{
+    float:left;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+.buying-content li{
+    width:188px;
+    height:148px;
+    margin:10px 10px 0 0;
+    border:1px solid #e9e9e9;
+    color:#727171;
+    position:relative;
+}
+.buying-content li.mr0{
+    margin-right:0;
+}
+.buying-content li em{
+    width:81px;
+    height:85px;
+    display:block;
+    overflow:hidden;
+    background:url(../../img/logo_85.png?v=11) no-repeat;
+    margin:10px auto 0 auto;
+}
+.buying-content li h3{
+    font:bold 14px/24px simsun;
+    padding:0 10px;
+    height:24px;
+    line-height:24px;
+    margin:0;
+}
+.buying-content li div{
+    position:absolute;
+    left:0;
+    top:0;
+    width:168px;
+    height:128px;
+    display:none;
+    background:#f4f4f4;
+    padding:10px;
+    text-align:left;
+}
+.buying-content li p{
+    line-height:120%;
+}
+.buying-content li:hover div{
+    display:block;
+}
+.buying-content li div h3{
+    padding:0;
+}
+.buying-content .btn-red{
+    position:absolute;
+    bottom:25px;
+    left:50px;
+    display:block;
+    height:28px;
+    width:86px;
+    cursor:pointer;
+    padding:0;
+    font-size:14px;
+    line-height:28px;
+    font-weight:bold;
+}
+.buying-links{
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    bottom:7px;
+}
+.buying-content li em.logo-dlt{
+    background-position:0 -270px;
+}
+.buying-content li em.logo-bjpks{
+    background-position:-170px -178px;
+}
+.buying-content li em.logo-pls{
+    background-position:0 -360px;
+}
+.buying-content li em.logo-plw{
+    background-position:0 -450px;
+}
+.buying-content li em.logo-fcsd{
+    background-position:0 -90px;
+}
+.buying-content li em.logo-qxc{
+    background-position:-81px 0;
+    width:84px;
+}
+.buying-content li em.logo-qlc{
+    background-position:0 -180px;
+}
+.buying-content li em.logo-cqssc, .buying-content li em.logo-jxssc{
+    background-position:-84px -360px;
+}
+.buying-content li em.logo-xjssc{
+    background-position:-86px -646px;
+}
+.buying-content li em.logo-cswfc{
+    background-position:-171px -645px;
+}
+.buying-content li em.logo-ajsfc{
+    background-position:0 -646px;
+}
+.buying-content li em.logo-hnwfc{
+    background-position:-169px -548px;
+}
+.buying-content li em.logo-ajffc{
+    background-position:-84px -548px;
+}
+.buying-content li em.logo-ajefc{
+    background-position:-253px -548px;
+}
+.buying-content li em.logo-ynwfc{
+    background-position:0 -548px;
+}
+.buying-content li em.logo-xyydwfc{
+    background-position:-254px -647px;
+}
+.buying-content li em.logo-blswfc{
+    background-position:-254px -454px;
+}
+.buying-content li em.logo-klsswm{
+    background-position:-254px -361px;
+}
+.buying-content li em.logo-syydj{
+    background-position:-85px -450px;
+}
+.buying-content li em.logo-gdsyxw{
+    background-position:-255px -90px;
+}
+.buying-content li em.logo-jxsyxw{
+    background-position:-255px -180px;
+}
+.buying-content li em.logo-cqsyxw{
+    background-position:-255px -265px;
+}
+.buying-content li em.logo-klb{
+    background-position:-170px 0;
+}
+.buying-content li em.logo-jsks{
+    background-position:-255px 0;
+}
+.buying-content li em.logo-djwfc{
+    background-position:-83px -92px;
+}
+.buying-content li em.logo-hgefc{
+    background-position:-169px -358px;
+}
+.buying-content li em.logo-azsfc{
+    background-position:-170px -91px;
+}
+.buying-content li em.logo-mdffc{
+    background-position:-84px -271px;
+}
+.buying-content li em.logo-jzefc{
+    background-position:-170px -270px;
+}
+.buying-content li em.logo-hiffc{
+    background-position:0 -747px;
+}
+.buying-content li em.logo-hiefc{
+    background-position:-85px -747px;
+}
+.buying-content li em.logo-hisfc{
+    background-position:-169px -747px;
+}
+.buying-content li em.logo-hiwfc{
+    background-position:-254px -747px;
+}

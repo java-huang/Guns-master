@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>合买大厅 - 福彩娱乐</title>
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/comm.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/pc_comm.css">
+    
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/index/buying_chipped.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/index/chipped_list.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/index/left_nav.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/index/paging.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/index/level.css">
+
+<link rel="stylesheet" href="${ctxPath}/static/css/layer.css" id="layuicss-skinlayercss"></head>
+<body>
+ @include("/top.html"){}
+<div class="content-container pt10 clear">
+    <div class="left-nav narrow-content fl">
+        <h1>合买大厅首页</h1>
+        <p>彩种筛选</p>
+        <ul>
+            <li class="active"><a class="c-main" href="index.html">全部彩种</a></li>
+        </ul>
+            <p>高频彩</p>
+            <ul>
+                        <li class=""><a class="c-main" href="合买内页/hmdt1.html">江苏快三</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt2.html">北京PK10</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt3.html">河内五分彩</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt4.html">印尼五分彩</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt5.html">重庆时时彩</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt6.html">新疆时时彩</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt7.html">埃及二分彩</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt8.html">埃及分分彩</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt9.html">十一运夺金</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt10.html">广东11选5</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt11.html">江西11选5</a></li>
+            </ul>
+            <p>数字彩</p>
+            <ul>
+                        <li class=""><a class="c-main" href="合买内页/hmdt12.html">福彩3D</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt13.html">排列3</a></li>
+                        <li class=""><a class="c-main" href="合买内页/hmdt14.html">排列5</a></li>
+            </ul>
+    </div>
+    <div class="wide-content fr">
+        <div class="border">
+            <div class="chipped-title">
+                <h1 class="fl c-hot">热门方案</h1>
+                <label class="c-remark fr">合买方案进度满100%才可以出票哦！</label>
+            </div>
+            <div class="chipped-filter">
+                <form action="http://www.haoy1314.com/Buying/Chipped">
+                    <input class="fl" type="hidden" name="lt">
+                    <label class="fl">状态：</label>
+                    <select class="fl" name="s">
+                        <option value="" selected="selected">所有</option>
+                        <option value="0">认购中</option>
+                        <option value="1">已出票</option>
+                        <option value="2">追号中</option>
+                        <option value="100">已中奖</option>
+                            <option value="7">未中奖</option>
+                        <option value="8">未出票</option>
+                        <option value="9">已撤单</option>
+                    </select>
+                    <label class="fl">佣金：</label>
+                    <select name="r" class="fl">
+                        <option value="" selected="selected">所有</option>
+                        <option value="1">有佣金</option>
+                        <option value="0">无佣金</option>
+                    </select>
+                    <label class="fl">保底：</label>
+                    <select name="g" class="fl">
+                        <option value="" selected="selected">所有</option>
+                        <option value="1">有保底</option>
+                        <option value="0">无保底</option>
+                    </select>
+                    <label class="fl">发起用户：</label>
+                    <input class="form-textbox fl" type="text" placeholder="搜索发起人" name="nn">
+                    <button type="submit" class="fl btn-red">查找</button>
+                </form>
+            </div>
+            <div class="chipped-list">
+                <table cellspacing="0" cellpadding="0" class="chipped-table">
+    <thead>
+        <tr>
+            <th class="tac">保密</th>
+            <th class="tal">发起人</th>
+            <th class="tal">发起人战绩</th>
+            <th class="tal">状态</th>
+            <th class="tal">彩种</th>
+            <th class="tal">进度</th>
+            <th class="tar">方案金额&nbsp;|</th>
+            <th class="tal">已购金额</th>
+            <th class="tal buy-column">认购金额</th>
+            <th class="tac operation-column">操作</th>
+        </tr>
+    </thead>
+    <tbody>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">A1*******</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="c-hot">认购中</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">55%+44%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">3430元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>1920元</span></td>
+                    <td class="tal">
+                            <input id="txtChippedMoney24723" onChange="$.limitNumber(this, 1510, 1)" class="form-textbox" placeholder="剩余1510元" type="text">
+                    </td>
+                    <td class="tac">
+                            <a onClick="$.buyingChipped(24723, &#39;txtChippedMoney24723&#39;)" class="btn-red" href="javascript:void(0)">购买</a>
+                        <a class="btn-white" href="合买内页/hmnyxq.html">详情</a>                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">脱衣*</td>
+                    <td class="tal"><em title="LV179" class="level-icon sun-lv1"></em><em title="LV179" class="level-icon moon-lv7"></em><em title="LV179" class="level-icon star-lv9"></em></td>
+                    <td><span class="c-hot">认购中</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">54%+45%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">4116元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2263元</span></td>
+                    <td class="tal">
+                            <input id="txtChippedMoney24722" onChange="$.limitNumber(this, 1853, 1)" class="form-textbox" placeholder="剩余1853元" type="text">
+                    </td>
+                    <td class="tac">
+                            <a onClick="$.buyingChipped(24722, &#39;txtChippedMoney24722&#39;)" class="btn-red" href="javascript:void(0)">购买</a>
+                        <a class="btn-white" href="合买内页/hmnyxq.html">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">没戏*</td>
+                    <td class="tal"><em title="LV174" class="level-icon sun-lv1"></em><em title="LV174" class="level-icon moon-lv7"></em><em title="LV174" class="level-icon star-lv4"></em></td>
+                    <td><span class="c-hot">认购中</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">52%+47%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2744元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>1454元</span></td>
+                    <td class="tal">
+                            <input id="txtChippedMoney24721" onChange="$.limitNumber(this, 1290, 1)" class="form-textbox" placeholder="剩余1290元" type="text">
+                    </td>
+                    <td class="tac">
+                            <a onClick="$.buyingChipped(24721, &#39;txtChippedMoney24721&#39;)" class="btn-red" href="javascript:void(0)">购买</a>
+                        <a class="btn-white" href="合买内页/hmnyxq.html">详情</a>
+                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">HH**</td>
+                    <td class="tal"><em title="LV177" class="level-icon sun-lv1"></em><em title="LV177" class="level-icon moon-lv7"></em><em title="LV177" class="level-icon star-lv7"></em></td>
+                    <td><span class="c-hot">认购中</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">65%+34%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2058元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>1358元</span></td>
+                    <td class="tal">
+                            <input id="txtChippedMoney24720" onChange="$.limitNumber(this, 700, 1)" class="form-textbox" placeholder="剩余700元" type="text">
+                    </td>
+                    <td class="tac">
+                            <a onClick="$.buyingChipped(24720, &#39;txtChippedMoney24720&#39;)" class="btn-red" href="javascript:void(0)">购买</a>
+                        <a class="btn-white" href="合买内页/hmnyxq.html">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">不可***</td>
+                    <td class="tal"><em title="LV174" class="level-icon sun-lv1"></em><em title="LV174" class="level-icon moon-lv7"></em><em title="LV174" class="level-icon star-lv4"></em></td>
+                    <td><span class="c-hot">认购中</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">63%+36%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2128元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>1361元</span></td>
+                    <td class="tal">
+                            <input id="txtChippedMoney24719" onChange="$.limitNumber(this, 767, 1)" class="form-textbox" placeholder="剩余767元" type="text">
+                    </td>
+                    <td class="tac">
+                            <a onClick="$.buyingChipped(24719, &#39;txtChippedMoney24719&#39;)" class="btn-red" href="javascript:void(0)">购买</a>
+                        <a class="btn-white" href="合买内页/hmnyxq.html">详情</a>
+                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">天缩**</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+40%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2016元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2016元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24718">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">A1*******</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+48%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">4802元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>4802元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24717">详情</a>
+                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">没戏*</td>
+                    <td class="tal"><em title="LV174" class="level-icon sun-lv1"></em><em title="LV174" class="level-icon moon-lv7"></em><em title="LV174" class="level-icon star-lv4"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+50%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2744元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2744元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24716">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">A1*******</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="c-hot">已中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+48%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2464元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2464元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24715">详情</a>
+                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">家佳***</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+36%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2744元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2744元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24714">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">天缩**</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="c-hot">已中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+40%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2128元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2128元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24713">详情</a>
+                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">玛莎**</td>
+                    <td class="tal"><em title="LV178" class="level-icon sun-lv1"></em><em title="LV178" class="level-icon moon-lv7"></em><em title="LV178" class="level-icon star-lv8"></em></td>
+                    <td><span class="c-hot">已中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+48%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2744元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2744元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24712">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">菊花*</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+50%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">4116元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>4116元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24711">详情</a>
+                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">天缩**</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+32%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2016元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2016元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24710">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">玛莎**</td>
+                    <td class="tal"><em title="LV178" class="level-icon sun-lv1"></em><em title="LV178" class="level-icon moon-lv7"></em><em title="LV178" class="level-icon star-lv8"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+40%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">3430元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>3430元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24709">详情</a>
+                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">家佳***</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+50%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2744元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2744元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24708">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">HH**</td>
+                    <td class="tal"><em title="LV177" class="level-icon sun-lv1"></em><em title="LV177" class="level-icon moon-lv7"></em><em title="LV177" class="level-icon star-lv7"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+37%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2016元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2016元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24707">详情</a>
+                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">98*</td>
+                    <td class="tal"><em title="LV175" class="level-icon sun-lv1"></em><em title="LV175" class="level-icon moon-lv7"></em><em title="LV175" class="level-icon star-lv5"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+38%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2016元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2016元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24706">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">菊花*</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+49%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2592元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2592元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24705">详情</a>
+                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">FF*****</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="c-hot">已中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+31%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">3430元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>3430元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24704">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">菊花*</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+43%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">3430元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>3430元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24703">详情</a>
+                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">脱衣*</td>
+                    <td class="tal"><em title="LV179" class="level-icon sun-lv1"></em><em title="LV179" class="level-icon moon-lv7"></em><em title="LV179" class="level-icon star-lv9"></em></td>
+                    <td><span class="c-hot">已中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+31%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2016元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2016元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24702">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">a1********</td>
+                    <td class="tal"><em title="LV173" class="level-icon sun-lv1"></em><em title="LV173" class="level-icon moon-lv7"></em><em title="LV173" class="level-icon star-lv3"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+32%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2016元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2016元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24701">详情</a>
+                    </td>
+                </tr>
+                <tr class="odd-numbered-line">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">国和**</td>
+                    <td class="tal"><em title="LV177" class="level-icon sun-lv1"></em><em title="LV177" class="level-icon moon-lv7"></em><em title="LV177" class="level-icon star-lv7"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+42%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">2592元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>2592元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24700">详情</a>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td class="tac"><em class="open-lock"></em></td>
+                    <td class="tal">天缩**</td>
+                    <td class="tal"><em title="LV176" class="level-icon sun-lv1"></em><em title="LV176" class="level-icon moon-lv7"></em><em title="LV176" class="level-icon star-lv6"></em></td>
+                    <td><span class="">未中奖</span></td>
+                    <td class="tal">重庆时时彩</td>
+                    <td class="tal">
+                                <p class="progress-info"><span class="fl">100%+44%</span><em class="fl"></em></p>
+
+                    </td>
+                    <td class="tar"><span class="c-hot">3430元</span><span>&nbsp;|</span></td>
+                    <td class="tal"><span>3430元</span></td>
+                    <td class="tal">
+                            <label class="c-remark">-</label>
+                    </td>
+                    <td class="tac">
+                        <a class="btn-white" href="http://www.haoy1314.com/Buying/Detail/24699">详情</a>
+                    </td>
+                </tr>
+    </tbody>
+</table>
+            </div>
+            <div class="chipped-paging mt20">
+                
+
+<div class="paging c-main">
+        <label class="ml0">首页</label>
+        <label>上一页</label>
+
+            <label class="active">1</label>
+            <a class="c-main" href="http://www.haoy1314.com/Buying/Chipped?lt=&amp;s=-1&amp;r=-1&amp;g=-1&amp;nn=&amp;pi=1">2</a>
+            <a class="c-main" href="http://www.haoy1314.com/Buying/Chipped?lt=&amp;s=-1&amp;r=-1&amp;g=-1&amp;nn=&amp;pi=2">3</a>
+            <a class="c-main" href="http://www.haoy1314.com/Buying/Chipped?lt=&amp;s=-1&amp;r=-1&amp;g=-1&amp;nn=&amp;pi=3">4</a>
+            <a class="c-main" href="http://www.haoy1314.com/Buying/Chipped?lt=&amp;s=-1&amp;r=-1&amp;g=-1&amp;nn=&amp;pi=4">5</a>
+            <a class="c-main" href="http://www.haoy1314.com/Buying/Chipped?lt=&amp;s=-1&amp;r=-1&amp;g=-1&amp;nn=&amp;pi=5">6</a>
+            <a class="c-main" href="http://www.haoy1314.com/Buying/Chipped?lt=&amp;s=-1&amp;r=-1&amp;g=-1&amp;nn=&amp;pi=6">7</a>
+            <a class="c-main" href="http://www.haoy1314.com/Buying/Chipped?lt=&amp;s=-1&amp;r=-1&amp;g=-1&amp;nn=&amp;pi=1">下一页</a>
+        <a class="c-main" href="http://www.haoy1314.com/Buying/Chipped?lt=&amp;s=-1&amp;r=-1&amp;g=-1&amp;nn=&amp;pi=739">尾页</a>
+    <span class="ml10">页次:</span>
+    <span class="c-hot">1</span>
+    <span>/</span>
+    <span>740</span>
+    <span class="ml10">共:</span>
+    <span class="c-hot">18489</span>
+    <span>条</span>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    @include("/footer.html"){}
+    
+    <input type="hidden" value="0" id="hidDisabledVercode">
+    <script src="${ctxPath}/static/js/jquery-1.8.3.min.js">
+    </script><div id="cnzz_1540086398122_C9083CDB" style="display: none;">
+    </div><script src="${ctxPath}/static/js/index/do.js"></script>
+    <script src="${ctxPath}/static/js/layer.js"></script>
+    <script src="${ctxPath}/static/js/comm.js"></script>
+    <script src="${ctxPath}/static/js/pc_comm.js"></script>
+    
+
+</body></html>

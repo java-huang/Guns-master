@@ -1,0 +1,132 @@
+﻿.head-top{
+    height:67px;
+    background:#fff;
+    padding:17px 0 16px 0;
+}
+.content-bg{
+    height:550px;
+    background:url(../../img/register_bg.jpg?v=1) no-repeat center;
+}
+.head-top a, .head-top a img{
+    float:left;
+    display:block;
+    margin:0;
+}
+.copyright{
+    background:#616161;
+    color:#bbbaba;
+    padding:35px 0;
+    text-align:center;
+    line-height:200%;
+}
+.copyright a{
+    color:#bbbaba;
+}
+.copyright a:hover{
+    text-decoration:underline;
+    color:#dadada;
+}
+.register-box{
+    width:244px;
+    padding:18px 22px 0 22px;
+    background:#fff;
+    border-radius:3px;
+    height:331px;
+    float:right;
+    margin-top:100px;
+}
+.input-item{
+    border:1px solid #dcdcdc;
+    border-radius:3px;
+    height:39px;
+    line-height:40px;
+    margin-top:15px;
+    overflow:hidden;
+    position:relative;
+}
+.input-item i{
+    position:absolute;
+    width:22px;
+    height:22px;
+    background:url(../../static/img/icons.png) -344px -424px;
+    top:9px;
+    left:9px;
+}
+.input-item i.password-icon{
+    background-position:-344px -450px;
+}
+.input-item i.vercode-icon{
+    background-position:-412px -450px;
+}
+.input-item i.qq-icon{
+    background-position:-365px -425px;
+}
+.input-item i.account-icon{
+    background-position:-388px -425px;
+}
+.input-item i.email-icon{
+    background-position:-389px -450px;
+}
+.input-item i.alipay-icon{
+    background-position:-412px -425px;
+}
+.input-item i.wechat-icon{
+    background-position:-436px -425px;
+}
+.input-item input{
+    width:200px;
+    padding:10px 4px 10px 0;
+    width:200px;
+    height:19px;
+    border:0;
+    outline:none;
+    float:left;
+    margin-left:40px;
+    line-height:19px;
+    font-size:15px;
+}
+.vercode-item img{
+    height:35px;
+    border:0;
+    width:auto;
+    border-radius:3px;
+    cursor:pointer;
+    background-color:#d93131;
+    color:#fff;
+    position:absolute;
+    right:2px;
+    top:2px;
+}
+.agreement-item{
+    font-size:13px;
+    height:15px;
+    line-height:15px;
+    padding:15px 0;
+}
+.agreement-item span, .agreement-item label{
+    float:left;
+}
+.agreement-item a{
+    padding:0 3px;
+    color:#ff5315;
+    cursor:pointer;
+}
+.agreement-item input{
+    float:left;
+    width:13px;
+    height:13px;
+    margin:1px 3px 0 0;
+    margin:0 3px 0 0\9;
+}
+.submit-button{
+    width:244px;
+    height:41px;
+    color:#ffe763;
+    background-color:#ff5315;
+    border-radius:3px;
+    display:block;
+    margin:auto;
+    border:0;
+    cursor:pointer;
+    font-size:18px;
+}

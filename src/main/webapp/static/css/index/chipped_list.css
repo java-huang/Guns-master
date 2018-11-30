@@ -1,0 +1,58 @@
+﻿.chipped-table{
+    width:100%;
+}
+.chipped-table th, .chipped-table td{
+    padding:7px 0 7px 3px;
+}
+.chipped-table .empty{
+    padding:50px 0;
+    text-align:center;
+}
+.progress-info{
+    font-size:12px;
+    height:18px;
+    line-height:16px;
+}
+.progress-info em{
+    display:inline-block;
+    width:14px;
+    line-height:13px;
+    height:13px;
+    margin:1px 0 0 3px;
+    background-color:#ea6c6f;
+    color:#fff;
+    text-align:center;
+    vertical-align:middle;
+    text-indent:100px;
+}
+.open-lock, .half-open, .totally-lock{
+    display:block;
+    width:15px;
+    height:14px;
+    margin:auto;
+}
+.half-open{
+    background-position:-241px -135px;
+}
+.totally-lock{
+    background-position:-227px -135px;
+}
+.chipped-list .operation-column{
+    width:120px;
+}
+.chipped-list .buy-column{
+    width:75px;
+}
+.chipped-table .form-textbox{
+    width:68px;
+}
+.chipped-list .btn-red, .chipped-list .btn-white{
+    width:53px;
+    display:inline-block;
+    padding:0;
+    height:21px;
+    line-height:21px;
+}
+.chipped-list .btn-white{
+    line-height:19px;
+}

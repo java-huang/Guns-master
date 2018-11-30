@@ -1,0 +1,45 @@
+﻿.main-infos{
+    border:6px solid #ededed;
+    height:115px;
+    padding:15px;
+}
+.left-infos{
+    width:432px;
+    border-right:1px solid #ededed;
+    height:115px;
+    position:relative;
+}
+.left-infos .info-head{
+    padding:2px;
+    border:1px solid #e9e9e9;
+    margin-right:10px;
+}
+.left-infos .info-head img{
+    width:74px;
+    height:74px;
+    display:block;
+}
+.left-infos p{
+    font-weight:700;
+    padding:3px 0 0 0;
+    margin:0;
+}
+.left-infos em{
+    font-weight:700;
+    font-style:normal;
+}
+.text-infos div{
+    padding:9px 0 0 0;
+}
+.approve-infos{
+    line-height:100%;
+    position:absolute;
+    bottom:5px;
+    left:0;
+}
+.betting-list table{
+    border-bottom:0;
+}
+.betting-list table .operation-cell{
+    width:70px;
+}

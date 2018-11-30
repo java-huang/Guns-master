@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>用户登录 - 福彩娱乐</title>
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/comm.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/pc_comm.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/login/account_login.css">
+    <link rel="stylesheet" href="${ctxPath}/static/css/layer.css" id="layuicss-skinlayercss"></head>
+<body>
+<div class="login-head">
+    <div class="content-container">
+        <a class="fl" href="http://138e1.com/"><img src="${ctxPath}/static/img/index_logo.png"></a>
+        <a class="fl" href="http://138e1.com/"><img src="${ctxPath}/static/img/20180907022931_0Sg1X.jpg"></a>
+    </div>
+</div>
+<div class="login-bg">
+    <div class="login-container">
+        <div class="login-box" id="divLoginBox">
+            <div class="input-row mt20">
+                <input name="account" type="text" maxlength="32" placeholder="请输入登录帐号" data-prompt="[&#39;请输入登录帐号！&#39;]" data-regex="[/^\S+$/]">
+            </div>
+            <div class="input-row">
+                <input name="password" type="password" maxlength="32" placeholder="请输入登录密码" data-trim="false" data-prompt="[&#39;请输入登录密码！&#39;]" data-regex="[/^\S+$/]">
+            </div>
+            <div class="input-row">
+                <input name="vercode" type="text" maxlength="5" placeholder="请输入验证码" data-prompt="[&#39;请输入登录验证码！&#39;, &#39;登录验证码长度不正确！&#39;]" data-regex="[/^\S+$/,/^\S{5}$/]">
+                <img id="vCode" src="${ctxPath}/validateCode" >
+                <input type="hidden" name="remember" value="on">
+            </div>
+            <div class="button-row">
+                <button>立即登录</button>
+            </div>
+            <div class="link-container">
+                <div class="fl">
+                    <input class="fl" type="checkbox" checked="checked" id="cboServiceAgreement">
+                    <label class="fl" for="cboServiceAgreement">同意《<span id="lblServiceAgreement">福彩娱乐用户服务协议</span>》</label>
+                </div>
+                <a class="fr" href="javascript:$.alert(&#39;忘记密码请联系管理员找回！&#39;)">忘记密码？</a>
+            </div>
+        </div>
+        <div class="login-footer">
+            <p><a href="http://138e1.com/">福彩娱乐</a>© 2014 黔ICP备11001424号-1 工商营业执照</p>
+            <p>广东 • 东莞 • 松山湖•　 梅州 • 兴宁 关于5188 • 诚征英才 • 企业文化</p>
+            <h2>国信办启动铲除网上暴恐音视频专项行动 暴恐举报</h2>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" value="0" id="hidDisabledVercode">
+<script src="${ctxPath}/static/js/jquery-1.8.3.min.js"></script>
+<script src="${ctxPath}/static/js/layer.js"></script>
+<script src="${ctxPath}/static/js/comm.js"></script>
+<script src="${ctxPath}/static/js/pc_comm.js"></script>
+<script src="${ctxPath}/static/js/account_login.js"></script>
+</body></html>

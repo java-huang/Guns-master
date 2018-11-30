@@ -1,0 +1,200 @@
+﻿.wide-content {
+    width:738px;
+    border:1px solid #ffb583;
+    padding:5px;
+    border-radius:5px;
+    background:#ffe4bc;
+    overflow:hidden;
+}
+.main-box{
+    background:#fff;
+    border-radius:5px;
+    padding-bottom:10px;
+}
+.hot-helper-bg{
+    height:260px;
+    background:url(../../static/img/helper_bg.png) no-repeat center 5px;
+}
+.divider{
+    height:22px;
+    position:relative;
+    text-align:center;
+}
+.divider label{
+    display:inline-block;
+    height:22px;
+    line-height:22px;
+    line-height:24px\9;
+    overflow:hidden;
+    background:#fff;
+    padding:0 10px;
+    position:relative;
+}
+.divider i, .divider b{
+    position:absolute;
+    border-top:1px solid #ccc;
+    width:50%;
+    top:12px;
+    top:11px\9;
+    left:10%;
+}
+.bc-eee i, .bc-eee b{
+    border-top-color:#eee;
+}
+.divider b{
+    left:auto;
+    right:10%;
+}
+.question-types > div{
+    width:50%;
+    float:left;
+    margin-top:10px;
+}
+.question-types ul{
+    margin:10px 0 0 45px;
+    padding:0;
+    list-style:none;
+}
+.question-types li{
+    position:relative;
+    padding-left:10px;
+}
+.question-types li a {
+    display:block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    height:25px;
+    line-height:21px;
+}
+.question-types li label{
+    position:absolute;
+    height:21px;
+    line-height:16px;
+    left:0;
+    top:0;
+}
+.question-list{
+    margin:0;
+    padding:13px 25px 3px 40px;
+    list-style:decimal;
+}
+.question-list ul, .recharge-type ul{
+    list-style:circle;
+}
+.question-title{
+    position:relative;
+    height:29px;
+    line-height:29px;
+}
+.question-title strong{
+    position:relative;
+    background:#fff;
+    padding-right:10px;
+    cursor:pointer;
+}
+.question-title i{
+    position:absolute;
+    height:1px;
+    background:#eee;
+    width:100%;
+    left:0;
+    top:14px;
+}
+.question-answer{
+    padding:5px 0;
+}
+.question-answer ul, ul.question-answer{
+    line-height:20px;
+    margin:0;
+    padding-left:30px;
+}
+.question-answer p{
+    margin:0;
+    padding:5px 0 5px 0;
+}
+.question-answer > p{
+    padding-left:14px;
+}
+.question-answer p.pl15{
+    padding-left:15px;
+}
+.block-img{
+    display:block;
+    margin:0 0 10px 0;
+    padding:0;
+    width:100%;
+}
+.recharge-bg{
+    height:70px;
+    width:100%;
+    background:url(../../static/img/helper_bg.png) no-repeat 0 bottom;
+}
+.recharge-type{
+    width:50%;
+    float:left;
+    margin-top:30px;
+}
+.recharge-type em{
+    height:81px;
+    width:84px;
+    float:left;
+    background:url(../../static/img/pay_logos.png);
+    margin-left:20px;
+}
+.recharge-type em.union-pay-logo{
+    background-position:right 0;
+}
+.recharge-type em.alipay-logo{
+    background-position:0 bottom;
+}
+.recharge-type em.wx-logo{
+    background-position:right bottom;
+}
+.recharge-type ul{
+    float:left;
+    margin:10px 0 0 0;
+    padding-left:30px;
+    font-weight:bold;
+}
+.type-title{
+    height:35px;
+    line-height:35px;
+    line-height:38px\9;
+    position:relative;
+    overflow:hidden;
+}
+.type-title i{
+    font-style:normal;
+    height:1px;
+    width:100%;
+    left:0;
+    top:18px;
+    position:absolute;
+    background:#eee;
+}
+.type-title strong{
+    position:absolute;
+    left:0;
+    top:0;
+    background:#fff;
+    padding:0 5px 0 25px;
+}
+.type-title i label{
+    position:absolute;
+    right:56px;
+    top:-7px;
+    height:12px;
+    line-height:12px;
+    font-size:12px;
+    color:#ccc;
+    background:#fff;
+    padding-right:10px;
+}
+.type-title a{
+    position:absolute;
+    right:0;
+    top:0;
+    padding-right:25px;
+    background:#fff;
+}

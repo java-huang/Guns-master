@@ -1,0 +1,41 @@
+﻿.article-title{
+    height:30px;
+    border-bottom:1px solid #ccc;
+    background:linear-gradient(top, #fdfdfd, #eeecec);
+    background:-webkit-linear-gradient(top, #fdfdfd, #eeecec);
+    background:-moz-linear-gradient(top, #fdfdfd, #eeecec);
+    background:-ms-linear-gradient(top, #fdfdfd, #eeecec);
+    background:-o-linear-gradient(top, #fdfdfd, #eeecec);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fdfdfd',endColorstr='#eeecec',grandientType=1);
+    font-weight:bold;
+    font-size:14px;
+    line-height:30px;
+    padding-left:10px;
+}
+.wide-content .article-list{
+    padding:7px 10px 5px 30px;
+    list-style-type:disc;
+}
+.wide-content .article-list li{
+    height:25px;
+    line-height:25px;
+    padding-left:0;
+    position:relative;
+}
+.wide-content .article-list li span{
+    position:absolute;
+    right:0;
+    top:0;
+    vertical-align:middle;
+}
+.wide-content .article-list, .wide-content .list-empty{
+    border-bottom:1px dotted #ccc;
+}
+.wide-content .list-empty{
+    padding:70px 0;
+    text-align:center;
+}
+.article-paging{
+    border-top:1px dotted #ccc;
+    padding:15px 0 16px;
+}

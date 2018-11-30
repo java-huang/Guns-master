@@ -1,0 +1,72 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="nav-close"><i class="fa fa-times-circle"></i>
+    </div>
+    <div class="sidebar-collapse">
+        <div class="goto-home">
+              <a target="_blank" href="/index">前往首页</a>
+        </div>
+        <ul class="nav" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                       <span class="block m-t-xs"><strong class="font-bold">${shiro.getUser().account}</strong></span>
+                    </a>
+                    <ul class="dropdown-menu m-t-xs">
+                    
+                        <li><a class="J_menuItem" href="${ctxPath}/mgr/user_info">个人资料</a></li>
+                        <li><a class="J_menuItem" href="${ctxPath}/mgr/user_chpwd">修改密码</a></li>
+                        <li class="divider"></li>
+                        <li><a href="${ctxPath}/logout">安全退出</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo-element">GS
+                </div>
+            </li>
+            
+            <li>
+                <a class="J_menuItem" href="/mgr" name="tabMenuItem">
+                    <i class="fa fa-user"></i>
+                    <span class="nav-label">用户列表</span>
+                </a>
+            </li>
+            <li>
+                <a class="J_menuItem" href="/role/index" name="tabMenuItem">
+                    <i class="fa fa-cubes"></i>
+                    <span class="nav-label">投注记录</span>
+                </a>
+            </li>
+            <li>
+                <a class="J_menuItem" href="" name="tabMenuItem">
+                    <i class="fa fa-paypal"></i>
+                    <span class="nav-label">充值记录</span>
+                </a>
+            </li>
+             <li>
+                <a class="J_menuItem" href="" name="tabMenuItem">
+                    <i class="fa fa-cc-paypal"></i>
+                    <span class="nav-label">提现记录</span>
+                </a>
+            </li>
+            <li>
+                <a class="J_menuItem" href="" name="tabMenuItem">
+                    <i class="fa fa-envelope"></i>
+                    <span class="nav-label">软文管理</span>
+                </a>
+            </li>
+            <li>
+                <a class="J_menuItem" href="" name="tabMenuItem">
+                    <i class="fa-user"></i>
+                    <span class="nav-label">实用工具</span>
+                </a>
+            </li>
+            <li>
+                <a class="J_menuItem" href="" name="tabMenuItem">
+                    <i class="fa-user"></i>
+                    <span class="nav-label">系统设置</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

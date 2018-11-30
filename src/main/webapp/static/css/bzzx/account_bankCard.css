@@ -1,0 +1,176 @@
+﻿.bank-card, .add-bank-card{
+    width:234px;
+    height:135px;
+    float:left;
+    border:1px solid #efefef;
+    border-radius:3px;
+    position:relative;
+    overflow:hidden;
+}
+.add-bank-card{
+    cursor:pointer;
+}
+.add-bank-card.ml10{
+    margin-left:10px;
+}
+.add-bank-card span{
+    display:inline-block;
+    line-height:135px;
+    font-size:19px;
+    position:relative;
+    padding-left:30px;
+}
+.add-bank-card:hover span{
+    color:#FE5400;
+}
+.add-bank-card em{
+    position:absolute;
+    font-size:32px;
+    font-weight:bold;
+    font-style:normal;
+    left:0;
+    top:50%;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    margin-top:-16px;
+    margin-top:-18px\9;
+}
+.bank-card > i{
+    font-style:normal;
+    text-align:center;
+    display:block;
+    padding-top:5px;
+}
+.bank-card > em{
+    margin:2px auto;
+}
+.bank-card > label{
+    display:block;
+    padding:5px 0 15px 0;
+    font-size:14px;
+    text-align:center;
+}
+.bank-card > p{
+    padding:0 15px;
+    height:20px;
+    line-height:20px;
+}
+.bank-logo{
+    display:block;
+    width:125px;
+    height:38px;
+    background:url(../../Images/bank_logos.jpg);
+}
+.icbc-logo{
+    background-position:-3px -11px;
+}
+.hxb-logo{
+    background-position:-3px -239px;
+}
+.psbc-logo{
+    background-position:-142px -70px;
+}
+.abchina-logo{
+    background-position:-566px -11px;
+}
+.boc-logo{
+    background-position:-425px -11px;
+}
+.ccb-logo{
+    background-position:-284px -11px;
+}
+.bankcomm-logo{
+    background-position:-3px -69px;
+}
+.zibolan-logo{
+    background-position:-3px -126px;
+}
+.cebbank-logo{
+    background-position:-284px -69px;
+}
+.cmbc-logo{
+    background-position:-424px -126px;
+}
+.cmbchina-logo{
+    background-position:-142px -11px;
+}
+.cib-logo{
+    background-position:-142px -126px;
+}
+.spdb-logo{
+    background-position:-424px -69px;
+}
+.cbhb-logo{
+    background-position:-423px -293px;
+}
+.bankofshanghai-logo{
+    background-position:-142px -184px;
+}
+.bankofbeijing-logo{
+    background-position:-566px -126px;
+}
+.nbcb-logo{
+    background-position:-566px -239px;
+}
+.pingan-logo{
+    background-position:-423px -184px;
+}
+.wzcb-logo{
+    background-position:-284px -238px;
+}
+.hkbchina-logo{
+    background-position:-566px -293px;
+}
+.hzbank-logo{
+    background-position:-3px -184px;
+}
+.bjrcb-logo{
+    background-position:-284px -184px;
+}
+.cgbchina-logo{
+    background-position:-566px -70px;
+}
+.bank-row em{
+    font-style:normal;
+    margin:auto;
+}
+.bank-row, .input-row{
+    width:340px;
+    overflow:hidden;
+}
+.input-row{
+    height:51px;
+    line-height:51px;
+}
+.bank-row{
+    height:38px;
+    line-height:38px;
+}
+.input-row .dialog-textbox, .input-row .form-select{
+    width:158px;
+    margin-top:10px;
+}
+.input-row .form-select{
+    height:32px;
+    width:170px;
+    line-height:20px;
+}
+.input-row em{
+    width:115px;
+    font-style:normal;
+    text-align:right;
+    padding-right:10px;
+}
+.button-row{
+    padding:25px 0;
+    text-align:center;
+}
+.button-row a{
+    margin:0 10px;
+    display:inline-block;
+    height:32px;
+    width:70px;
+    padding:0;
+    line-height:32px;
+}

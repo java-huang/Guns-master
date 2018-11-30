@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>常见问题 - 福彩娱乐</title>
+     <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/comm.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/pc_comm.css">
+    
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/index/left_nav.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/bzzx/helper_comm.css">
+
+    <link rel="stylesheet" href="${ctxPath}/static/css/layer.css" id="layuicss-skinlayercss"></head>
+<body>
+ @include("/top.html"){}
+<div class="content-container pt10 clear">
+    <div class="left-nav narrow-content fl">
+    <h1>帮助中心</h1>
+    <p>新手上路</p>
+    <ul>
+        <li class=""><a class="c-main" href="/helper">热门问题</a></li>
+        <li class=""><a class="c-main" href="/helper/question">常见问题</a></li>
+    </ul>
+    <p>个人帐号</p>
+    <ul>
+        <li class=""><a class="c-main" href="/helper/register">登录注册</a></li>
+        <li class=""><a class="c-main" href="/helper/security">信息安全</a></li>
+    </ul>
+    <p>充值提现</p>
+    <ul>
+        <li class=""><a class="c-main" href="/helper/recharge">账户充值</a></li>
+        <li class=""><a class="c-main" href="/helper/cash">兑奖提现</a></li>
+    </ul>
+    <p>规则说明</p>
+    <ul>
+        <li class=""><a class="c-main" href="/helper/betting">网上投注</a></li>
+        <li class="active"><a class="c-main" href="/helper/chipped">跟单合买</a></li>
+        <li class=""><a class="c-main" href="/helper/level">战绩等级</a></li>
+    </ul>
+</div>
+
+    <div class="wide-content fr">
+        <div class="main-box">
+            <ol class="question-list">
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>什么是合买？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>合买是由两个或者两个以上用户共同出资购买彩票，按照出资比例承担风险、分享利益的投注方式。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>什么是方案保密？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>方案保密指发起人不允许其它用户查看自己发起方案的内容，但保密方案在该奖期开奖后将向所有用户公开。发起人在发起方案时在是否公开选项中选择“开奖后可见”即可对方案进行保密。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>什么是方案保底？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>方案保底分为发起人保底和网站保底。发起人保底指发起人承诺合买截止后，如果方案还没有满员，发起人再投入先前承诺的保底金额以最大限度让方案成交。网站保底指网站承诺合买截止后，如果加上发起人的保底金方案还没有满员，网站再投入先前承诺的保底金额以最大限度让方案成交。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>方案保底最低金额为多少？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>发起人可自愿选择是否保底，保底金额不限，最大可全额保底。网站保底金额为方案总金额的5％。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>什么时候会出现方案未出票？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>方案未出票指合买方案在奖期截止后，方案进度＋发起人保底额＋网站保底金额都未能促使方案满员，则该方案自动流产，即未能合买成功。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>方案未出票怎么办？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>方案未出票后，系统自动将合买发起人的保底资金和认购金额、各合买跟单人的认购金额自动解冻，返还至用户的账户中。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>什么是方案已撤销？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>方案撤单指发起人将整个合买方案撤销或跟单人将认购股份撤销，且方案只能由发起人撤单。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>如何对方案进行撤销操作？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>用户登录网站，进入“合买记录”。</li>
+                        <li>找到你发起的合买订单后点击“详情”按钮进入合买详情页。</li>
+                        <li>在详情页的“期号详情”列表下找到“撤销”按钮。</li>
+                        <li>点击“撤销”按钮进行撤销操作。</li>
+                        <li>系统返回撤销成功提示。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>如何发起合买方案？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>用户登录电话投注平台，进入购彩大厅。</li>
+                        <li>选择需要购买的采种进入投注页。</li>
+                        <li>选号完成后点击“发起合买”选项。</li>
+                        <li>输入必要的信息后确认订单。</li>
+                        <li>系统返回发起成功提示。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>合买发起人认购的最低金额为多少？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>发起人认购金额至少为方案总金额的5%。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>如何进行合买跟单？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>用户登录后进入合买大厅。</li>
+                        <li>选择合买跟单的玩法，进入该玩法合买认购页面。</li>
+                        <li>在要跟单方案的“输入份数”字段的文本框内输入认购的份数。</li>
+                        <li>点击购买，系统返回跟单成功信息。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>合买中奖后奖金如何分配？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>合买方案中奖后，税后奖金将按照发起人和跟单人的出资比例进行分配，奖金直接返还到中奖用户电话投注资金账户，网站不收取任何手续费及佣金，中奖后亦不提成。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>如何查询合买记录？</strong></div>
+                    <ul class="question-answer hide">
+                        <li>登入后移动鼠标到网站左上角“我的彩票”选择“合买记录”即可查看购彩记录。</li>
+                    </ul>
+                </li>
+                <li>
+                    <div onClick="doQuestion(this)" class="question-title medium-size c-main"><i></i><strong>什么是盈利分成？</strong></div>
+                    <div class="question-answer hide">
+                        <p>为了奖励发起人发起合买方案，发起人可以设置0%-10%的比例作为奖金提成。提成金额直接派发到用户的“现金账户”。</p>
+                        <ul>
+                            <li>提成条件：合买方案中奖且盈利。</li>
+                            <li>提成计算：(税后中奖金额 - 订单金额) × 提成比例。</li>
+                        </ul>
+                        <p>示例：合买方案总金额1000元，税后中奖金额2000元，发起人设置提成比例10%，则发起人提成 = (2000 - 1000) × 10% = 100元；若税后中奖金额900元，则发起人无提成；</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+   @include("/footer.html"){}
+   
+    <input type="hidden" value="0" id="hidDisabledVercode">
+      <script src="${ctxPath}/static/js/jquery-1.8.3.min.js"></script>
+    <script src="${ctxPath}/static/js/layer.js"></script>
+    <script src="${ctxPath}/static/js/comm.js"></script>
+    <script src="${ctxPath}/static/js/pc_comm.js"></script>
+    <script src="${ctxPath}/static/js/bzzx/helper_comm.js"></script>
+
+
+</body></html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://www.haoy1314.com/Account/Recharge -->
+<html>
+<body>
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/bzzx/account_comm.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/bzzx/account_recharge.css">
+@include("/personal/common.html"){}
+    <div class="wide-content fr">
+        <div class="tab-box account-tab">
+            <div class="tab-head">
+                <ul>
+                    <li class="active"><a class="c-main" href="http://www.haoy1314.com/Account/Recharge?tab=inline">在线充值</a></li>
+                    <li class=""><a class="c-main" href="http://www.haoy1314.com/Account/Recharge?tab=wechat">微信扫码</a></li>
+                    <li class=""><a class="c-main" href="http://www.haoy1314.com/Account/Recharge?tab=alipay">支付宝扫码</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                    <div class="p20 inline-recharge inline-yyb">
+                        <form id="formRecharge" data-action="" target="_blank" method="post">
+                            <div class="clear mt20 inline-input" id="divInlineInput">
+                                <label>充值金额：</label>
+                                <div class="input-text"><input type="number" id="txtRechargeMoney" name="money" value="100" placeholder="请输入充值金额"><i></i></div>
+                                <div class="fast-input">
+                                    <ul class="c-dark clear" id="ulFastInput" data-type="yyb">
+                                            <li class="border">100元</li>
+                                            <li class="border">200元</li>
+                                            <li class="border">500元</li>
+                                            <li class="border">1000元</li>
+                                            <li class="border">5000元</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="inline-prompt"><i></i>建议使用IE浏览器继续，以便正常使用。</p>
+                            <div class="inline-remarks c-red">即时到帐，充值免收手续费，最小充值金额50元。</div>
+                            <button class="inline-submit" onClick="submitRecharge()" type="button">确认，去支付充值</button>
+                            <div class="inline-checkbox clear"><input id="cboInlineCheckbox" checked="checked" type="checkbox"><label for="cboInlineCheckbox">我同意《</label><span class="c-link">支付协议</span><label for="cboInlineCheckbox">》</label></div>
+                            <input type="hidden" name="uid" value="292">
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    @include("/footer.html"){}
+    
+    <input type="hidden" value="0" id="hidDisabledVercode">
+     <script src="${ctxPath}/static/js/jquery-1.8.3.min.js"></script>
+    <div id="cnzz_1540216239612_C9083CDB" style="display: none;"></div>
+     <script src="${ctxPath}/static/js/layer.js"></script>
+    <script src="${ctxPath}/static/js/comm.js"></script>
+    <script src="${ctxPath}/static/js/pc_comm.js"></script>
+    <script src="${ctxPath}/static/js/bzzx/account_recharge.js"></script>
+    <script>
+       $("#recharge").addClass("active");
+    </script>
+
+</body></html>

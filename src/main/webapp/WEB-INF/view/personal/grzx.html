@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+ @include("/personal/common.html"){}
+
+    <div class="wide-content fr">
+        <div class="main-infos clear">
+            <div class="left-infos fl">
+                <div class="clear">
+                    <div class="info-head fl"><img class="fl" src="${ctxPath}/static/img/default_head.png"></div>
+                    <div class="text-infos fl">
+                        <p class="c-main">你好，${shiro.getUser().account}</p>
+                        <div>
+                            <label class="c-dark">余额：</label>
+                            <em class="c-main">0</em>
+                        </div>
+                        <div>
+                            <label class="c-dark">今日购彩：</label>
+                            <em class="c-sky-blue">0</em>
+                            <label class="ml20 c-dark">今日中奖：</label>
+                            <em class="c-hot">0</em>
+                        </div>
+                    </div>
+                </div>
+                <div class="approve-infos">
+                        <a class="c-main" href="http://www.haoy1314.com/Account/Info">尚未设置手机</a>
+                    <a class="ml20 c-main" href="http://www.haoy1314.com/Account/Password">修改资金密码</a>
+                        <a class="ml20 c-main" href="javascript:$.alert(&#39;您尚未设置身份信息，点击确认前往设置！&#39;, function(){location.href=&#39;/Account/Info?source=%2FAccount%2FBankCard&#39;})">您尚未绑定银行卡</a>
+                </div>
+            </div>
+            <img class="fr" src="${ctxPath}/static/img/account_ad.jpg">
+        </div>
+        <div class="list-table border mt10">
+            <p class="border-b">最近投注记录</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>投注时间</th>
+                        <th>彩种</th>
+                        <th>期号</th>
+                        <th>发起人</th>
+                        <th>方案金额</th>
+                        <th>投注金额</th>
+                        <th>状态</th>
+                        <th>中奖金额</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td colspan="9" class="list-empty c-remark">暂无投注记录数据</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+    <!-- footer -->
+    @include("/footer.html"){}
+    <input type="hidden" value="0" id="hidDisabledVercode">
+    <script src="${ctxPath}/static/js/jquery-1.8.3.min.js"></script>
+    <div id="cnzz_1540086513762_C9083CDB" style="display: none;"></div>
+     <script src="${ctxPath}/static/js/layer.js"></script>
+    <script src="${ctxPath}/static/js/comm.js"></script>
+    <script src="${ctxPath}/static/js/pc_comm.js"></script>
+    <script>
+       $("#account").addClass("active");
+    </script>
+</body></html>

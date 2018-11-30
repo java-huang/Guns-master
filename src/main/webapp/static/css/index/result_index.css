@@ -1,0 +1,61 @@
+﻿.result-box, .result-detail, .result-detail-tab{
+    border:1px solid #ccc;
+}
+.result-box{
+    border-bottom-width:0;
+}
+.result-detail, .result-detail-tab{
+    border-width:1px 0 1px 0;
+}
+.result-title{
+    height:36px;
+    line-height:36px;
+    padding:0 15px;
+    margin:0;
+    background:linear-gradient(top, #ffffff, #fafafa);
+    background:-webkit-linear-gradient(top, #ffffff, #fafafa);
+    background:-moz-linear-gradient(top, #ffffff, #fafafa);
+    background:-ms-linear-gradient(top, #ffffff, #fafafa);
+    background:-o-linear-gradient(top, #ffffff, #fafafa);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#fafafa',grandientType=1);
+}
+.result-detail-tab{
+    border-top:#ba2636 2px solid;
+    width:100%;
+}
+.result-detail-tab th{
+    background:#f3f2f2;
+    color:#717171;
+    font-weight:normal;
+    text-align:left;
+    height:32px;
+    padding-left:15px;
+}
+.result-detail-tab th.tac{
+    text-align:center;
+}
+.result-detail-tab td{
+    padding:10px 0 9px 15px;
+    border-top:1px dotted #ddd;
+}
+.result-detail-tab table td{
+    padding:1px;
+    border:0;
+}
+.result-detail-tab td.pl10{
+    padding-left:10px;
+}
+.result-detail-tab .btn-red{
+    display:block;
+    width:54px;
+    height:22px;
+    line-height:22px;
+    line-height:24px\9;
+    text-align:center;
+    vertical-align:central;
+    padding:0;
+}
+.betting-btn:hover{
+    color:#fff;
+    text-decoration:underline;
+}

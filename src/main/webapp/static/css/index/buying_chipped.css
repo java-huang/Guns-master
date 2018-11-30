@@ -1,0 +1,51 @@
+﻿.chipped-title{
+    height:38px;
+    line-height:38px;
+    padding:0 15px;
+}
+.chipped-title h1{
+    font-weight:bold;
+    font-size:15px;
+}
+.chipped-filter{
+    height:23px;
+    background:#f7f7f7;
+    border-bottom:1px solid #ccc;
+    padding:4px 0 3px 0;
+    overflow:hidden;
+}
+.chipped-filter label, .chipped-filter input, .chipped-filter select, .chipped-filter button{
+    margin-left:15px;
+}
+.chipped-filter input, .chipped-filter select{
+    margin-left:3px;
+    margin-top:2px;
+}
+.chipped-filter select, .chipped-filter button{
+    height:21px;
+    margin-top:1px;
+}
+.chipped-filter button{
+    height:23px;
+    padding:0 10px;
+    text-indent:2px;
+    color:#fff;
+    border:0;
+    width:50px;
+    cursor:pointer;
+    color:#fff;
+    border-radius:3px;
+}
+.chipped-filter input{
+    width:80px;
+}
+.chipped-filter label{
+    line-height:23px;
+}
+.chipped-list{
+    border-bottom:1px dotted #ccc;
+}
+.chipped-paging{
+    border-top:1px dotted #ccc;
+    padding:15px 0 16px;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://www.haoy1314.com/Account/CashRecord -->
+<html>
+
+<body>
+    
+@include("/personal/common.html"){}
+    <div class="wide-content fr">
+        <div class="filter-table border">
+            <div class="filter-head">
+                <em class="c-hot fl">提现记录列表</em>
+                <span class="fr c-remark">筛选提现记录</span>
+            </div>
+            <div class="filter-content border-b clear">
+                <form method="get" action="http://www.haoy1314.com/Account/CashRecord">
+                    <span class="fl ml15 mr5 c-dark">状态</span>
+                    <select class="fl form-select" name="s">
+                        <option value="">所有</option>
+                            <option value="0">申请中</option>
+                            <option value="1">已打款</option>
+                            <option value="2">已到账</option>
+                            <option value="3">打款失败</option>
+                            <option value="4">已取消</option>
+                    </select>
+                    <span class="fl ml15 mr5 c-dark">时间</span>
+                    <select class="fl form-select" name="t">
+                        <option value="">一周内</option>
+                        <option value="1month">一月内</option>
+                        <option value="3month">三月内</option>
+                        <option value="6month">半年内</option>
+                    </select>
+                    <button class="fl ml20">查找</button>
+                </form>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="number-cell">序号</th>
+                        <th>时间</th>
+                        <th>金额</th>
+                        <th>手续费</th>
+                        <th>持卡人</th>
+                        <th>银行名</th>
+                        <th>卡号</th>
+                        <th>预留手机</th>
+                        <th>状态</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td colspan="10" class="list-empty c-remark">暂无提现记录数据</td>
+                        </tr>
+                </tbody>
+            </table>
+            <div class="paging-container mt20">
+                
+
+<div class="paging c-main">
+        <label class="ml0">首页</label>
+        <label>上一页</label>
+
+            <label>下一页</label>
+        <label>尾页</label>
+    <span class="ml10">页次:</span>
+    <span class="c-hot">1</span>
+    <span>/</span>
+    <span>0</span>
+    <span class="ml10">共:</span>
+    <span class="c-hot">0</span>
+    <span>条</span>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+     @include("/footer.html"){}
+    <input type="hidden" value="0" id="hidDisabledVercode">
+    <script src="${ctxPath}/static/js/jquery-1.8.3.min.js"></script>
+      <div id="cnzz_1540216235558_C9083CDB" style="display: none;"></div>
+    <script src="${ctxPath}/static/js/layer.js"></script>
+    <script src="${ctxPath}/static/js/comm.js"></script>
+    <script src="${ctxPath}/static/js/pc_comm.js"></script>
+    <script>
+       $("#cashRecord").addClass("active");
+    </script>
+</body></html>

@@ -1,0 +1,363 @@
+﻿.image-banner{
+    position:relative;
+    margin-top:-1px;
+}
+.image-banner ul{
+    position:absolute;
+    left:0;
+    top:0;
+    transition:transform .5s ease;
+    -moz-transition:transform .5s ease;
+    -ms-transition:transform .5s ease;
+    -webkit-transition:transform .5s ease;
+    -o-transition:transform .5s ease;
+}
+.image-banner, .image-banner ul, .image-banner ul li, .image-banner img, .image-banner a{
+    width:100%;
+    height:250px;
+    display:block;
+    overflow:hidden;
+    border:0;
+}
+.image-banner ol{
+    background:rgba(110,110,110,0.3);
+    position:absolute;
+    right:5px;
+    bottom:5px; 
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#36000000,endColorstr=#36000000);
+    height:25px;
+    padding-left:3px;
+    border-radius:12px;
+    -webkit-border-radius:12px;
+    -moz-border-radius:12px;
+    -o-border-radius:12px;
+    -ms-border-radius:12px;
+    display:block;
+    position:absolute;
+}
+.image-banner ol li{
+    width:21px;
+    height:21px;
+    float:left;
+    background-color:#fff;
+    color:#6e6e6e;
+    text-align:center;
+    cursor:pointer;
+    margin:2px 3px 0 0;
+    line-height:21px;
+    border-radius:21px;
+    -webkit-border-radius:21px;
+    -moz-border-radius:21px;
+    -o-border-radius:21px;
+    -ms-border-radius:21px;
+}
+.image-banner ol li.active{
+    background:#c42e42;
+    color:#fefefe;
+}
+.lottery-result p.result-info{
+    padding:10px 0 7px 10px;
+}
+.lottery-result p.result-info a{
+    font-weight:bold;
+    font-size:14px;
+}
+.lottery-result .result-balls{
+    padding-left:10px;
+}
+.lottery-result .result-other{
+    padding:5px 10px 10px 0;
+    text-align:right;
+}
+.lottery-result{
+    border-bottom:1px dotted #ccc;
+}
+.lottery-result.not-border{
+    border-bottom:0;
+}
+.charts-demo a, .charts-demo img{
+    display:block;
+    width:100%;
+}
+.tab-charts-content a.fl{
+    line-height:160%;
+}
+.lottery-center, .mobile-lottery, .chipped-lottery{
+    position:relative;
+    padding-left:19px;
+}
+.mobile-lottery{
+    padding-left:16px;
+}
+.chipped-lottery{
+    padding-left:22px;
+}
+.lottery-center i, .mobile-lottery i, .chipped-lottery i {
+    background:url(../../static/img/icons.png) no-repeat -398px -86px;
+    width:15px;
+    height:15px;
+    position:absolute;
+    left:0;
+    top:6px;
+}
+.mobile-lottery i{
+    background-position:-383px -86px;
+    width:12px;
+    height:17px;
+    top:5px;
+}
+.chipped-lottery i{
+    background-position:-416px -86px;
+    width:19px;
+    height:17px;
+    top:5px;
+}
+.content-left{
+    width:519px;
+    border-right:1px solid #ccc;
+    float:left;
+}
+.content-right{
+    width:228px;
+    float:left;
+}
+.group-head{
+    height:22px;
+    overflow:hidden;
+    margin:15px 0 10px;
+    line-height:22px;
+}
+.group-head label{
+    width:66px;
+    text-align:right;
+}
+.group-head ul{
+    float:left;
+    padding-left:10px;
+}
+.group-head li{
+    float:left;
+    height:22px;
+    text-align:center;
+    cursor:pointer;
+    border-radius:2px;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    -ms-border-radius:2px;
+    -o-border-radius:2px;
+    background:#e3e3e3;
+    margin-right:10px;
+    width:66px;
+    text-align:center;
+}
+.group-head li.active{
+    background-color:#b6253a;
+    color:#fff;
+}
+.group-content em{
+    margin-left:18px;
+    width:61px;
+    height:64px;
+    background:url(../../img/logo_64.png?v=11) no-repeat;
+}
+.group-content em.logo-dlt{
+    background-position:0 -203px;
+}
+.group-content em.logo-fcsd{
+    background-position:0 -68px;
+}
+.group-content em.logo-cqssc{
+    background-position:-63px -269px;
+}
+.group-content em.logo-hnwfc{
+    background-position:-65px -474px;
+}
+.group-content em.logo-ynwfc{
+    background-position:0 -474px;
+}
+.group-content em.logo-bjpks{
+    background-position:-128px -135px;
+}
+.group-content em.logo-ajefc{
+    background-position:-260px -407px;
+}
+.group-content em.logo-ajffc{
+    background-position:-193px -407px;
+}
+.group-content em.logo-ajsfc{
+    background-position:-195px -474px;
+}
+.group-content em.logo-xjssc{
+    background-position:-130px -474px;
+}
+.group-content em.logo-syydj{
+    background-position:-64px -338px;
+}
+.group-content em.logo-cswfc{
+    background-position:-260px -475px;
+}
+.group-content em.logo-jsks{
+    background-position:-192px -338px;
+}
+.group-content em.logo-pls{
+    background-position:0 -269px;
+}
+.group-content em.logo-plw{
+    background-position:0 -337px;
+}
+.group-content em.logo-qxc{
+    background-position:-64px 2px;
+}
+.group-content em.logo-klsswm{
+    background-position:-259px 0;
+}
+.group-content em.logo-blswfc{
+    background-position:-193px -68px;
+}
+.group-content em.logo-xyydwfc{
+    background-position:-193px 0;
+}
+.group-content em.logo-djwfc{
+    background-position:-63px -202px;
+}
+.group-content em.logo-hgefc{
+    background-position:-127px -270px;
+}
+.group-content em.logo-azsfc{
+    background-position:-128px -202px;
+}
+.group-content em.logo-mdffc{
+    background-position:-63px -67px;
+}
+.group-content em.logo-jzefc{
+    background-position:-127px -67px;
+}
+.group-content em.logo-hiffc{
+    background-position:-259px -69px;
+}
+.group-content em.logo-hiefc{
+    background-position:-259px -136px;
+}
+.group-content em.logo-hisfc{
+    background-position:-259px -203px;
+}
+.group-content em.logo-hiwfc{
+    background-position:-259px -271px;
+}
+.group-content p {
+    padding:13px 0 3px 12px;
+}
+.group-content span{
+    padding-left:12px;
+    display:block;
+}
+.group-content a{
+    height:34px;
+    line-height:34px;
+    width:115px;
+    cursor:pointer;
+    margin-left:8px;
+    margin:15px 15px 0 0;
+    padding:0;
+    font-size:23px;
+}
+.group-content a:hover{
+    text-decoration:none;
+    color:#fff;
+}
+.lottery-group{
+    padding-bottom:15px;
+    border-bottom:1px solid #ccc;
+}
+.lottery-group.not-border{
+    border-bottom:0;
+}
+.list-group{
+    height:198px;
+    overflow:hidden;
+}
+.winning-group{
+    height:182px;
+}
+.list-group div{
+    padding:15px 0 5px 10px;
+    font-size:14px;
+    height:15px;
+    line-height:14px;
+    overflow:hidden;
+    background:#fff;
+    position:relative;
+    z-index:100;
+}
+.list-group div label{
+    font-size:14px;
+    font-weight:bold;
+    border-left:3px solid #b6253a;
+    padding-left:7px;
+    display:block;
+}
+.list-group div a{
+    font-size:12px;
+}
+.list-group .empty{
+    height:163px;
+    line-height:163px;
+    display:block;
+    text-align:center;
+}
+.winning-group .empty{
+    height:147px;
+    line-height:147px;
+}
+.winning-list li{
+    height:21px;
+    line-height:21px;
+    position:relative;
+}
+.winning-list span{
+    position:absolute;
+    right:10px;
+    top:0;
+}
+.middle-banner, .middle-banner img{
+    width:100%;
+    display:block;
+}
+.chipped-list{
+    border:0;
+}
+.chipped-list .tab-head{
+    height:34px;
+    line-height:34px;
+    border:0;
+}
+.chipped-list .tab-head{
+    background:linear-gradient(top, #b82237 0%, #981328 100%);
+    background:-webkit-linear-gradient(top, #b82237 0%, #981328 100%);
+    background:-moz-linear-gradient(top, #b82237 0%, #981328 100%);
+    background:-ms-linear-gradient(top, #b82237 0%, #981328 100%);
+    background:-o-linear-gradient(top, #b82237 0%, #981328 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b82237',endColorstr='#981328',grandientType=1);
+}
+.chipped-list .tab-head div{
+    float:right;
+    background:url(../../static/img/icons.png) no-repeat -15px -159px;
+    height:100%;
+    padding:0 25px;
+}
+.chipped-list ul{
+    height:29px;
+    margin-top:5px;
+}
+.chipped-list li{
+    line-height:24px;
+    padding:0 10px;
+    cursor:pointer;
+    height:100%;
+    margin:0;
+}
+.chipped-list li.active{
+    font-weight:bold;
+    color:#333;
+    background:#fff;
+}

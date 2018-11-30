@@ -1,0 +1,43 @@
+﻿.paging{
+    height:28px;
+    overflow:hidden;
+    text-align:center;
+    font-size:12px;
+}
+.paging a, .paging label, .paging span{
+    display:inline-block;
+    height:26px;
+    line-height:26px;
+    border:#bcbcbc 1px solid;
+    vertical-align:middle;
+    overflow:hidden;
+    margin-left:3px;
+    padding:0 5px;
+    min-width:17px;
+}
+.paging label{
+    color:#bababa;
+    border-color:#bababa;
+}
+.paging label.active{
+    color:#fff;
+    background-color:#d4344a;
+    border-color:#d4344a;
+}
+.paging a.ml0, .paging label.ml0{
+    margin-left:0;
+}
+.paging a:hover{
+    background:#e8e8e8;
+}
+.paging span{
+    line-height:26px;
+    overflow:hidden;
+    padding:0;
+    border-color:#fff;
+    min-width:0;
+    margin-left:0;
+}
+.paging span.ml10{
+    margin-left:10px;
+}

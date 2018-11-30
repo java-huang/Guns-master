@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>用户注册 - 福彩娱乐</title>
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/comm.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/pc_comm.css">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/login/account_register.css">
+    <link rel="stylesheet" href="${ctxPath}/static/css/layer.css" id="layuicss-skinlayercss"></head>
+<body>
+    <div class="head-top">
+        <div class="content-container" title="福彩娱乐首页">
+            <a class="fl logo" href="http://138e1.com/"><img class="fl" src="${ctxPath}/static/img/register.png" title="福彩娱乐首页"></a>
+            <a class="fl logo logo-dream ml10" href="http://138e1.com/"><img class="fl" src="${ctxPath}/static/img/account.jpg" title="福彩娱乐首页"></a>
+        </div>
+    </div>
+
+
+    <div class="content-bg">
+        <div class="content-container">
+            <div class="register-box" id="divRegisterBox" style="margin-top:72px;height:387px;">
+                <div class="input-item">
+                    <i class="account-icon"></i>
+                    <input type="text" name="account" data-regex="[/\S+/]" data-prompt="[&#39;注册帐号不能为空！&#39;]" placeholder="登录帐号" maxlength="32">
+                </div>
+                <div class="input-item">
+                    <i class="password-icon"></i>
+                    <input type="password" id="txtPassword" name="password" data-regex="[/\S+/]" data-prompt="[&#39;登录密码不能为空！&#39;]" placeholder="登录密码" maxlength="32">
+                </div>
+                <div class="input-item">
+                    <i class="password-icon"></i>
+                    <input type="password" placeholder="确认登录密码" name="newPassword" data-regex="[/\S+/, &#39;txtPassword&#39;]" data-prompt="[&#39;请再次输入登录密码！&#39;, &#39;两次密码输入不一致！&#39;]" maxlength="32">
+                </div>
+                <div class="input-item vercode-item">
+                    <i class="vercode-icon"></i>
+                    <input type="text" name="vercode" data-regex="[/\S+/, /^\S{4}$/]" data-prompt="[&#39;验证码不能为空！&#39;, &#39;验证码长度不正确&#39;]" placeholder="图形验证码" maxlength="5">
+                    <img id="imgVercode" src="${ctxPath}/validateCode" >
+                </div>
+                <div class="agreement-item">
+                    <input name="deptid" type="hidden"/>
+                    <input id="cboRegisterAgreement" checked="checked" type="checkbox">
+                    <label for="cboRegisterAgreement">我已阅读并同意 《</label>
+                    <span class="c-sky-blue">福彩娱乐注册协议</span>
+                    <label for="cboRegisterAgreement">》</label>
+                </div>
+                <button type="button" id="btnSubmit" class="submit-button">注册</button>
+            </div>
+        </div>
+    </div>
+    <div class="copyright clear-css">
+        <p>增值电信业务经营许可证：粤B2-20110560 | <a target="_blank" href="javascript:void(0)">网站相关资质证明</a></p>
+        <p>福彩娱乐版权所有 ©1997-2018</p>
+        <p>福彩娱乐提醒您：理性购彩，热心公益。未满18周岁的未成年人禁止购彩及兑奖！</p>
+    </div>
+    <input type="hidden" value="0" id="hidDisabledVercode">
+    <script src="${ctxPath}/static/js/jquery-1.8.3.min.js"></script>
+    <script src="${ctxPath}/static/js/layer.js"></script>
+    <script src="${ctxPath}/static/js/comm.js"></script>
+    <script src="${ctxPath}/static/js/pc_comm.js"></script>
+    <script src="${ctxPath}/static/js/account_register.js"></script>
+</body></html>

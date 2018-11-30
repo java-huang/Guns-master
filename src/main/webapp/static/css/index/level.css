@@ -1,0 +1,223 @@
+﻿.level-icon{
+    background:url(../../img/level_bg.gif) no-repeat;
+    display:inline-block;
+    margin:1px 1px 0 0;
+    width:15px;
+    height:15px;
+}
+.crown-lv1 {
+	background-position: -191px -10px
+}
+.crown-lv2 {
+	background-position: -208px -10px
+}
+.crown-lv3 {
+	background-position: -225px -10px
+}
+.crown-lv4 {
+	background-position: -242px -10px
+}
+.crown-lv5 {
+	background-position: -259px -10px
+}
+.crown-lv6 {
+	background-position: -191px -27px
+}
+.crown-lv7 {
+	background-position: -208px -27px
+}
+.crown-lv8 {
+	background-position: -225px -27px
+}
+.crown-lv9 {
+	background-position: -242px -27px
+}
+.sun-lv1 {
+	background-position: -14px -10px
+}
+.sun-lv2 {
+	background-position: -31px -10px
+}
+.sun-lv3 {
+	background-position: -48px -10px
+}
+.sun-lv4 {
+	background-position: -65px -10px
+}
+.sun-lv5 {
+	background-position: -82px -10px
+}
+.sun-lv6 {
+	background-position: -99px -10px
+}
+.sun-lv7 {
+	background-position: -116px -10px
+}
+.sun-lv8 {
+	background-position: -133px -10px
+}
+.sun-lv9 {
+	background-position: -150px -10px
+}
+.moon-lv1 {
+	background-position: -14px -44px
+}
+.moon-lv2 {
+	background-position: -30px -44px
+}
+.moon-lv3 {
+	background-position: -47px -44px
+}
+.moon-lv4 {
+	background-position: -63px -44px
+}
+.moon-lv5 {
+	background-position: -81px -44px
+}
+.moon-lv6 {
+	background-position: -98px -44px
+}
+.moon-lv7 {
+	background-position: -115px -44px
+}
+.moon-lv8 {
+	background-position: -132px -44px
+}
+.moon-lv9 {
+	background-position: -149px -44px
+}
+.star-lv1 {
+	background-position: -14px -27px
+}
+.star-lv2 {
+	background-position: -31px -27px
+}
+.star-lv3 {
+	background-position: -48px -27px
+}
+.star-lv4 {
+	background-position: -65px -27px
+}
+.star-lv5 {
+	background-position: -82px -27px
+}
+.star-lv6 {
+	background-position: -99px -27px
+}
+.star-lv7 {
+	background-position: -116px -27px
+}
+.star-lv8 {
+	background-position: -133px -27px
+}
+.star-lv9 {
+	background-position: -150px -27px
+}
+.gray-crown-lv1 {
+	background-position: -191px -45px
+}
+.gray-crown-lv2 {
+	background-position: -208px -45px
+}
+.gray-crown-lv3 {
+	background-position: -225px -45px
+}
+.gray-crown-lv4 {
+	background-position: -242px -45px
+}
+.gray-crown-lv5 {
+	background-position: -259px -45px
+}
+.gray-crown-lv6 {
+	background-position: -191px -63px
+}
+.gray-crown-lv7 {
+	background-position: -208px -63px
+}
+.gray-crown-lv8 {
+	background-position: -225px -63px
+}
+.gray-crown-lv9 {
+	background-position: -242px -63px
+}
+.gray-sun-lv1 {
+	background-position: -14px -61px
+}
+.gray-sun-lv2 {
+	background-position: -31px -61px
+}
+.gray-sun-lv3 {
+	background-position: -48px -61px
+}
+.gray-sun-lv4 {
+	background-position: -65px -61px
+}
+.gray-sun-lv5 {
+	background-position: -82px -61px
+}
+.gray-sun-lv6 {
+	background-position: -99px -61px
+}
+.gray-sun-lv7 {
+	background-position: -116px -61px
+}
+.gray-sun-lv8 {
+	background-position: -133px -61px
+}
+.gray-sun-lv9 {
+	background-position: -150px -61px
+}
+.gray-moon-lv1 {
+	background-position: -14px -95px
+}
+.gray-moon-lv2 {
+	background-position: -30px -95px
+}
+.gray-moon-lv3 {
+	background-position: -47px -95px
+}
+.gray-moon-lv4 {
+	background-position: -63px -95px
+}
+.gray-moon-lv5 {
+	background-position: -81px -95px
+}
+.gray-moon-lv6 {
+	background-position: -98px -95px
+}
+.gray-moon-lv7 {
+	background-position: -115px -95px
+}
+.gray-moon-lv8 {
+	background-position: -132px -95px
+}
+.gray-moon-lv9 {
+	background-position: -149px -95px
+}
+.gray-star-lv1 {
+	background-position: -14px -78px
+}
+.gray-star-lv2 {
+	background-position: -31px -78px
+}
+.gray-star-lv3 {
+	background-position: -48px -78px
+}
+.gray-star-lv4 {
+	background-position: -65px -78px
+}
+.gray-star-lv5 {
+	background-position: -82px -78px
+}
+.gray-star-lv6 {
+	background-position: -99px -78px
+}
+.gray-star-lv7 {
+	background-position: -116px -78px
+}
+.gray-star-lv8 {
+	background-position: -133px -78px
+}
+.gray-star-lv9 {
+	background-position: -150px -78px
+}

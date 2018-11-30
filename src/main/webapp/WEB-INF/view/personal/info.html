@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/comm.css">
+	<link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/pc_comm.css">
+	<link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/bzzx/account_index.css">
+	<link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/bzzx/account_comm.css">
+	<link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/index/left_nav.css">
+	<link type="text/css" rel="stylesheet" href="${ctxPath}/static/css/index/paging.css">
+    <title>资料修改 - 福彩娱乐</title>
+    </head>
+<body>
+<div class="top-nav">
+        <div class="content-container">
+            <div class="fl top-user-info">
+                    <label class="c-dark">欢迎您，</label>
+                    <a href="http://www.haoy1314.com/Account">${shiro.getUser().account}</a>
+                    <span class="c-dark ml5">[余额：<label class="c-hot">0.00</label>]</span>
+                    <span class="c-dark ml5">[<a href="http://www.haoy1314.com/Account/Recharge">充值</a>]</span>
+                    <span class="c-dark ml5">[<a href="http://www.haoy1314.com/Account/Cash">取现</a>]</span>
+                    <span class="c-dark ml5">[<a href="/Manage">管理后台</a>]</span>
+                    <span class="c-dark ml5">[<a id="btnTopLogout" href="javascript:void(0)">退出</a>]</span>
+            </div>
+            <div class="fr top-nav-links">
+                            <div>
+                                <a href="/index" class="c-main">首页</a>                            </div>
+                            <div>
+                                    <b></b>
+                                <a href="https://fir.im/x5lm" class="c-main">APP下载</a>
+                            </div>
+                            <div>
+                                    <b></b>
+                                <a href="/buying" class="c-main">购彩中心</a>                            </div>
+                            <div>
+                                    <b></b>
+                                <a href="/kjgg" class="c-main">开奖公告</a>                            </div>
+                            <div class="top-nav-menu">
+                                    <b></b>
+                                <a href="/grzx" class="c-main">我的彩票</a>
+                                    <i></i>
+                                    <ul>
+                                           <li><a href="/account/bettingRecord" class="c-main">投注记录</a></li>
+                                           <li><a href="/account/moneyRecord" class="c-main">收支记录</a></li>
+                                           <li><a href="/account/info" class="c-main">个人资料</a></li>
+                                    </ul>
+                                    <em></em>
+                            </div>
+                            <div>
+                                    <b></b>
+                                <a href="news" class="c-main">新闻资讯</a></div>
+                            <div class="pr0">
+                                    <b></b>
+                                <a href="helper" class="c-main">帮助中心</a></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="nav-logo">
+        <div class="content-container">
+            <a class="fl logo" href="http://www.haoy1314.com/"><img class="fl" src="${ctxPath}/static/img/index_logo.png" title="福彩娱乐首页"></a>
+            <a class="fl logo ml10" href="http://www.haoy1314.com/"><img class="fl" src="${ctxPath}/static/img/20180907022931_0Sg1X.jpg" title="福彩娱乐首页"></a>
+            <div class="fr c-main">
+                    <div class="server-info fl"><label class="c-remark">客服QQ</label><span class="c-main">1184709797</span></div>
+                                    <a target="_blank" class="inline-qq fl" title="在线QQ：1184709797" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1184709797&amp;site=qq&amp;menu=yes"></a>
+            </div>
+        </div>
+    </div>
+    
+      <div class="nav-main">
+        <div class="content-container">
+            <div class="fl all-lottery-type">
+                <label>请选择彩种</label>
+                <ul class="all-types">
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt3.html">
+                                        <em class="logo-jsks"></em>
+                                        <strong>江苏快三</strong>
+                                        <span class="c-hot">火爆开售</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt4.html">
+                                        <em class="logo-bjpks"></em>
+                                        <strong>北京PK10</strong>
+                                        <span class="c-black">每天179期</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt5.html">
+                                        <em class="logo-hnwfc"></em>
+                                        <strong>河内五分彩</strong>
+                                        <span class="c-remark">全天开奖</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt6.html">
+                                        <em class="logo-ynwfc"></em>
+                                        <strong>印尼五分彩</strong>
+                                        <span class="c-dark">24小时开不停</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt7.html">
+                                        <em class="logo-cqssc"></em>
+                                        <strong>重庆时时彩</strong>
+                                        <span class="c-red">每天120期哦</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt8.html">
+                                        <em class="logo-xjssc"></em>
+                                        <strong>新疆时时彩</strong>
+                                        <span class="c-sky-blue">连续开奖96期</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt9.html">
+                                        <em class="logo-ajefc"></em>
+                                        <strong>埃及二分彩</strong>
+                                        <span class="c-highlight">每天720期</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt10.html">
+                                        <em class="logo-ajffc"></em>
+                                        <strong>埃及分分彩</strong>
+                                        <span class="c-main">每天1440期</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt11.html">
+                                        <em class="logo-syydj"></em>
+                                        <strong>十一运夺金</strong>
+                                        <span class="c-hot">每天开奖87次</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt12.html">
+                                        <em class="logo-gdsyxw"></em>
+                                        <strong>广东11选5</strong>
+                                        <span class="c-black">任意玩任意中</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt13.html">
+                                        <em class="logo-jxsyxw"></em>
+                                        <strong>江西11选5</strong>
+                                        <span class="c-remark">十分钟一期</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt1.html">
+                                        <em class="logo-fcsd"></em>
+                                        <strong>福彩3D</strong>
+                                        <span class="c-dark">2元赢取1800元</span>                                    </a>                                </li>
+                                <li>
+                                    <a class="c-main" href="购彩内页/gcdt2.html">
+                                        <em class="logo-pls"></em>
+                                        <strong>排列3</strong>
+                                        <span class="c-red">天天开奖赢不停</span>                                    </a>                                </li>
+
+                    <li class="types-classification"><label class="label-text fl">数字</label><div class="fl ml5"><a href="gcdt.html" class="c-main">排列5</a></div>
+                    <div class="clear"></div></li>
+                </ul>
+            </div>
+            <ul class="fl main-menu">
+                <li><a hidefocus="true" href="/index">首页</a></li>
+                <li class="not-hover">|</li>
+                <li><a hidefocus="true" href="/buying">购彩中心</a></li>
+                <li class="not-hover">|</li>
+                <li><a hidefocus="true" href="/hmdt">合买大厅</a></li>
+                <li class="not-hover">|</li>
+                <li><a hidefocus="true" href="/kjgg">彩票开奖</a></li>
+                <li class="not-hover">|</li>
+                <li><a hidefocus="true" href="/charts">走势图</a></li>
+                <li class="not-hover">|</li>
+                <li><a hidefocus="true" href="/news">彩票资讯</a></li>
+                <li class="not-hover">|</li>
+                <li><a hidefocus="true" href="/helper">帮助中心</a></li>
+                <li class="not-hover">|</li>
+                <li><a hidefocus="true" href="/account">我的彩票</a></li>
+                <li class="not-hover">|</li>
+                <li><a target="_blank" hidefocus="true" href="https://fir.im/5l1n">App下载</a></li>
+            </ul>
+        </div>
+    </div>
+<div class="content-container clear pt10">
+    <div class="left-nav narrow-content fl">
+    <h1>我的彩票</h1>
+    <p>个人中心</p>
+    <ul>
+        <li class="" id="account"><a class="c-main" href="/account">信息概述</a></li>
+        <li id="bettingRecord"><a class="c-main" href="/account/bettingRecord">投注记录</a></li>
+    </ul>
+    <p>资金管理</p>
+    <ul>
+        <li id="moneyRecord"><a class="c-main" href="/account/moneyRecord">收支记录</a></li>
+        <li id="chargeRecord"><a class="c-main" href="/account/chargeRecord">充值记录</a></li>
+        <li id="cashRecord"><a class="c-main" href="/account/cashRecord">提现记录</a></li>
+        <li id="recharge"><a class="c-main" href="/account/recharge">我要充值</a></li>
+        <li id="cash"><a class="c-main" href="/account/cash">我要提现</a></li>
+    </ul>
+    <p>信息管理</p>
+    <ul>
+        <li id="info"><a class="c-main" href="/account/info">资料修改</a></li>
+        <li id="pwdMange"><a class="c-main" href="/account/password">密码管理</a></li>
+        <li id="bankCard"><a class="c-main" href="/account/bankCard">银行卡管理</a></li>
+    </ul>
+</div>
+    <div class="wide-content fr">
+        <div class="tab-box account-tab">
+            <div class="tab-head">
+                <ul>
+                        <li class="active"><b>个人资料</b></li>
+                        <li><a class="c-main" href="http://www.haoy1314.com/Account/Info?tab=detail">详细资料</a></li>
+                </ul>
+            </div>
+            <div class="tab-content" >
+                 <form id="divFormContent">
+                    <input type="hidden" data-regex="" name="head" id="hidUserHead" value="/Content/Images/default_head.png">
+                    <div class="set-prompt c-dark">真实姓名和身份证是领取大奖的重要核对依据，请填写真实信息，填写后不可修改！可只填真实姓名和身份证。</div>
+                    <!-- <div class="head-row clear">
+                        <span class="fl">头像</span>
+                        <div class="fl" id="divUserHead"><iframe scrolling="no" frameborder="0" marginheight="0" marginwidth="0" src="./资料修改 - 福彩娱乐_files/ImageUpload.html"></iframe></div>
+                    </div>-->
+                    <div class="edit-row clear mt20">
+                        <span class="fl"><em class="c-hot pr5">*</em>真实姓名</span>
+                            <input name="name" id="realName" class="fl form-textbox" placeholder="请输入真实姓名" type="text" maxlength="10" data-regex="[/\S+/,/^[\u4e00-\u9fa5]{2,10}$/]" data-prompt="[&#39;真实姓名不能为空！&#39;, &#39;真实姓名输入错误！&#39;]">
+                    </div>
+                    <div class="edit-row clear mt20">
+                        <span class="fl"><em class="c-hot pr5">*</em>身份证号码</span>
+                            <input class="fl form-textbox" placeholder="请输入身份证号码" id="idCard" name="idCard" type="text" maxlength="18" data-regex="[/\S+/,/^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/]" data-prompt="[&#39;身份证不能为空！&#39;, &#39;身份证号码输入错误！&#39;]">
+                    </div>
+                    <div class="edit-row clear mt20">
+                        <span class="fl">昵称</span>
+                        <input class="fl form-textbox" data-regex="" maxlength="10" value="吉祥如意" type="text" name="nickName" placeholder="请输入昵称">
+                    </div>
+                    <div class="textarea-row clear mt20">
+                        <span class="fl">个性签名</span>
+                        <textarea class="fl form-textbox" data-regex="" maxlength="50" name="signature" placeholder="请输入您的个性签名"></textarea>
+                    </div>
+	                <div class="button-row mt20">
+	                    <span class="btn-red" id="btnSubmit">提交</span>
+	                </div>
+                </form>
+                <div class="precautions mt20 pt15 pb10">
+                    <p class="c-black">注意事项</p>
+                    <ol class="c-dark">
+                        <li>请务必如实填写"真实姓名"和"身份证号"，这两个信息必须和身份证上的内容完全一致，否则无法领奖；目前以身份证号和彩票标识码作为兑奖凭证，护照、军官证、台胞证、香港身份证、社会保障卡、机动车驾驶证等均不能领奖；</li>
+                        <li>依据财政部《彩票发行与销售管理暂行规定》未满18岁不得购买彩票；</li>
+                        <li>购买彩票是个人行为，请保证以上信息是您个人的真实信息，不要使用公司或他人的信息！</li>
+                        <li>如确有修改身份证号和/或真实姓名的需要，请联系客服申诉。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <input type="hidden" value="0" id="hidDisabledVercode">
+    <script src="${ctxPath}/static/js/bzzx/exchange.1.2.1.min.js" aync="true"></script>
+    <script src="${ctxPath}/static/js/jquery-1.8.3.min.js"></script>
+    <div id="cnzz_1540216257514_C9083CDB" style="display: none;"></div>
+    <script src="${ctxPath}/static/js/layer.js"></script>
+    <script src="${ctxPath}/static/js/bzzx/image_upload.js"></script>
+    <script src="${ctxPath}/static/js/bzzx/account_info.js"></script>
+    <script>
+       $("#info").addClass("active");
+    </script>
+</body></html>
