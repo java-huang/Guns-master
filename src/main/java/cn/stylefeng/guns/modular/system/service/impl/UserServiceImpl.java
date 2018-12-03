@@ -48,10 +48,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
     @Override
     public List<Map<String, Object>> selectUsers(DataScope dataScope, String name, String beginTime, String endTime, String deptid) {
-        List<Map<String, Object>> userList = this.baseMapper.selectUsers(dataScope, name, beginTime, endTime, deptid);
+        /*List<Map<String, Object>> userList = this.baseMapper.selectUsers(dataScope, name, beginTime, endTime, deptid);
         if (userList!=null && userList.size()>0) {
 			
-		}
+		}*/
     	return this.baseMapper.selectUsers(dataScope, name, beginTime, endTime, deptid);
     }
 

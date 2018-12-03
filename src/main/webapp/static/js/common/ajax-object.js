@@ -10,7 +10,7 @@
 	};
 	
 	$ax.prototype = {
-		start : function () {	
+		start : function () {
 			var me = this;
 			
 			
