@@ -18,6 +18,7 @@ package cn.stylefeng.guns.modular.system.service.impl;
 import cn.stylefeng.guns.modular.system.dao.UserMapper;
 import cn.stylefeng.guns.modular.system.model.User;
 import cn.stylefeng.guns.modular.system.service.IUserService;
+import cn.stylefeng.guns.modular.system.transfer.UserDto;
 import cn.stylefeng.roses.core.datascope.DataScope;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
@@ -47,12 +48,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     }
 
     @Override
-    public List<Map<String, Object>> selectUsers(DataScope dataScope, String name, String beginTime, String endTime, String deptid) {
+    public List<Map<String, Object>> selectUsers(DataScope dataScope, UserDto userDto) {
         /*List<Map<String, Object>> userList = this.baseMapper.selectUsers(dataScope, name, beginTime, endTime, deptid);
         if (userList!=null && userList.size()>0) {
 			
 		}*/
-    	return this.baseMapper.selectUsers(dataScope, name, beginTime, endTime, deptid);
+    	return this.baseMapper.selectUsers(dataScope, userDto);
     }
 
     @Override

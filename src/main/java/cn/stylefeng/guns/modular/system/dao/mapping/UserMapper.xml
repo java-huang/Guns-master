@@ -53,20 +53,23 @@
         select
         <include refid="Base_Column_List" />
         from sys_user
-        where status != 3
-        <if test="name != null and name != ''">
-            and (phone like CONCAT('%',#{name},'%')
-            or account like CONCAT('%',#{name},'%')
-            or name like CONCAT('%',#{name},'%'))
-        </if>
-        <if test="beginTime != null and beginTime != '' and endTime != null and endTime != ''">
-            and (createTime between CONCAT(#{beginTime},' 00:00:00') and CONCAT(#{endTime},' 23:59:59'))
-        </if>
+        <where>
+            <if test="dto.name != null and dto.name != ''">
+                (phone like CONCAT('%',#{dto.name},'%')
+                or account like CONCAT('%',#{dto.name},'%')
+                or name like CONCAT('%',#{dto.name},'%'))
+            </if>
+            <if test="dto.beginTime != null and dto.beginTime != '' and dto.endTime != null and dto.endTime != ''">
+                and (createTime between CONCAT(#{dto.beginTime},' 00:00:00') and CONCAT(#{dto.endTime},' 23:59:59'))
+            </if>
+            <if test="dto.roleid != null and dto.roleid != ''">
+                and roleid = #{dto.roleid}
+            </if>
+        </where>
     </select>
 
     <update id="setStatus">
-        update sys_user set status = #{status} where id =
-        #{userId}
+        update sys_user set status = #{status} where id = #{userId}
     </update>
 
     <update id="changePwd">

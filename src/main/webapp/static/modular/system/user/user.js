@@ -36,31 +36,22 @@ User.initColumn = function () {
         {title: '提现', field: 'withdraw_sum', align: 'center', valign: 'middle', sortable: true},
         {title: '充值', field: 'pay_sum', align: 'center', valign: 'middle', sortable: true},
         {title: '归属', field: '', align: 'center', valign: 'middle', sortable: true},
-        {title: '标识', field: '', align: 'center', valign: 'middle', sortable: true},
-        {title: '注册时间', field: 'createtime', align: 'center', valign: 'middle', sortable: true},
         {
-            title: '用户类型',
-            field: 'roleid',
+            title: '标识',
+            field: 'status',
             align: 'center',
             valign: 'middle',
             sortable: true,
             formatter: function (value, row, index) {
-                if (value == 1) {
-                    return "普通用户";
-                }
-                if (value == 2) {
-                    return "代理用户";
-                }
-                if (value == 3) {
-                    return "运营人员";
-                }
-                if (value == 4) {
-                    return "主管理员";
-                } else {
-                    return "虚拟用户";
-                }
+                if (value === 1)
+                    return "正常";
+                else if (value === 2)
+                    return "冻结";
+                else
+                    return "已删除";
             }
         },
+        {title: '注册时间', field: 'createtime', align: 'center', valign: 'middle', sortable: true},
         {title: '登录时间', field: 'login_time', align: 'center', valign: 'middle', sortable: true},
         {
             title: '操作',
@@ -69,9 +60,12 @@ User.initColumn = function () {
             width: '9%',
             formatter: function (value, row, index) {
                 var txt = '';
-                txt += '<button type="button" class="btn btn-primary btn-xs" onclick="User.openAddMgr()">充值</button>&nbsp;';
-                txt += '<button type="button" class="btn btn-primary btn-xs" onclick="User.openDelMgr(' + row.id + ', \'' + row.account + '\')">删除</button>&nbsp;';
-                txt += '<button type="button" class="btn btn-primary btn-xs" onclick="User.openAddMgr()">详情</button>';
+                txt += '<button type="button" class="btn btn-primary btn-xs" onclick="User.openUserPay(' + row.id + ',' + row.status + ')">充值</button>&nbsp;';
+                if (row.status === 3)
+                    txt += '<button type="button" class="btn btn-primary btn-xs" onclick="User.openDelMgr(' + row.id + ', \'' + row.account + '\', 1)">恢复</button>&nbsp;';
+                else
+                    txt += '<button type="button" class="btn btn-primary btn-xs" onclick="User.openDelMgr(' + row.id + ', \'' + row.account + '\', 3)">删除</button>&nbsp;';
+                txt += '<button type="button" class="btn btn-primary btn-xs" onclick="User.openChangeUser(' + row.id + ')">修改</button>';
                 return txt;
             }
         }
@@ -100,7 +94,7 @@ User.check = function () {
 User.openAddMgr = function () {
     var index = layer.open({
         type: 2,
-        title: '添加用户',
+        title: '新增虚拟用户',
         area: ['500px', '300px'], //宽高
         fix: false, //不固定
         maxmin: true,
@@ -110,58 +104,89 @@ User.openAddMgr = function () {
 };
 
 /**
+ * 点击充值按钮时
+ */
+User.openUserPay = function (userId, status) {
+    if (status == 3) {
+        Feng.error("操作失败!该用户已经删除!");
+        return false;
+    }
+    var index = layer.open({
+        type: 2,
+        title: '请输入充值金额（可以为负数）',
+        area: ['500px', '300px'], //宽高
+        fix: false, //不固定
+        maxmin: true,
+        content: Feng.ctxPath + '/mgr/user_pay/' + userId
+    });
+    this.layerIndex = index;
+};
+
+/**
  * 点击修改按钮时
  */
-User.openChangeUser = function () {
-    if (this.check()) {
-        var index = layer.open({
-            type: 2,
-            title: '编辑用户',
-            area: ['800px', '300px'], //宽高
-            fix: false, //不固定
-            maxmin: true,
-            content: Feng.ctxPath + '/mgr/user_edit/' + this.seItem.id
-        });
-        this.layerIndex = index;
-    }
+User.openChangeUser = function (userId) {
+    var index = layer.open({
+        type: 2,
+        title: '编辑用户',
+        area: ['800px', '400px'], //宽高
+        fix: false, //不固定
+        maxmin: true,
+        content: Feng.ctxPath + '/mgr/user_edit/' + userId
+    });
+    this.layerIndex = index;
 };
 
 /**
  * 点击删除按钮时
+ *
+ * =1启动 =3删除
  */
-User.openDelMgr = function (id, account) {
-    var operation = function(){
+User.openDelMgr = function (userId, account, type) {
+    var text = '删除';
+    if (type == 1)
+        text = '恢复';
+    var operation = function () {
         var ajax = new $ax(Feng.ctxPath + "/mgr/delete", function () {
-            Feng.success("删除成功!");
+            Feng.success(text + "成功!");
             User.table.refresh();
         }, function (data) {
-            Feng.error("删除失败!" + data.responseJSON.message + "!");
+            Feng.error(text + "失败!" + data.responseJSON.message + "!");
         });
-        ajax.set("userId", id);
+        ajax.set("userId", userId);
+        ajax.set("type", type);
         ajax.start();
     };
 
-    Feng.confirm("确定删除&nbsp;[&nbsp;<span style=\"color: red;\">" + account + "</span>&nbsp;]&nbsp;吗？", operation);
+    Feng.confirm("确定" + text + "&nbsp;[&nbsp;<span style=\"color: red;\">" + account + "</span>&nbsp;]&nbsp;吗？", operation);
 
 };
 
-
+/**
+ * 查询表单提交参数对象
+ * @returns {{}}
+ */
+User.formParams = function () {
+    var userDto = {};
+    userDto.name = $("#userName").val();
+    userDto.beginTime = $("#beginTime").val();
+    userDto.endTime = $("#endTime").val();
+    userDto.roleid = $("#roleid").val();
+    return userDto;
+};
 
 /**
  * 搜索角色
  */
 User.search = function () {
-    var queryData = {};
-    queryData['name'] = $("#userName").val();
-    queryData['beginTime'] = $("#beginTime").val();
-    queryData['endTime'] = $("#endTime").val();
-    User.table.refresh({query: queryData});
-}
+    User.table.refresh({query: User.formParams()});
+};
 
 $(function () {
     var defaultColunms = User.initColumn();
     var table = new BSTable(User.id, "/mgr/list", defaultColunms);
     table.setPaginationType("client");
+    table.setQueryParams(User.formParams());
     table.init();
     User.table = table;
 });

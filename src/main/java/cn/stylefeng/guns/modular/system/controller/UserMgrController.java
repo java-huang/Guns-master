@@ -30,12 +30,14 @@ import cn.stylefeng.guns.core.util.ResponseVO;
 import cn.stylefeng.guns.modular.system.model.User;
 import cn.stylefeng.guns.modular.system.service.IMenuService;
 import cn.stylefeng.guns.modular.system.service.IUserService;
+import cn.stylefeng.guns.modular.system.transfer.UserDto;
 import cn.stylefeng.guns.modular.system.warpper.UserWarpper;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.roses.core.reqres.response.ResponseData;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import cn.stylefeng.roses.kernel.model.exception.ServiceException;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -136,6 +138,20 @@ public class UserMgrController extends BaseController {
     }
 
     /**
+     * 跳转到充值页面
+     */
+    @RequestMapping("/mgr/user_pay/{userId}")
+    public String userPay(@PathVariable Integer userId, Model model) {
+        if (ToolUtil.isEmpty(userId)) {
+            throw new ServiceException(BizExceptionEnum.REQUEST_NULL);
+        }
+        User user = this.userService.selectById(userId);
+        model.addAttribute(user);
+        LogObjectHolder.me().set(user);
+        return PREFIX + "user_pay.html";
+    }
+
+    /**
      * 跳转到查看用户详情页面
      */
     @RequestMapping("/mgr/user_info")
@@ -187,7 +203,7 @@ public class UserMgrController extends BaseController {
      */
     @RequestMapping("/mgr/list")
     @ResponseBody
-    public Object list(@RequestParam(required = false) String name, @RequestParam(required = false) String beginTime, @RequestParam(required = false) String endTime, @RequestParam(required = false) String deptid) {
+    public Object list(@Valid UserDto userDto) {
       /*  if (ShiroKit.isAdmin()) {
             List<Map<String, Object>> users = userService.selectUsers(null, name, beginTime, endTime, deptid);
             return new UserWarpper(users).wrap();
@@ -197,7 +213,7 @@ public class UserMgrController extends BaseController {
             return new UserWarpper(users).wrap();
         }*/
     	
-        List<Map<String, Object>> users = userService.selectUsers(null, name, beginTime, endTime, deptid);
+        List<Map<String, Object>> users = userService.selectUsers(null, userDto);
         return new UserWarpper(users).wrap();
     }
 
@@ -231,35 +247,64 @@ public class UserMgrController extends BaseController {
     }
     
     /**
-     * 修改管理员
+     * 修改用户
      *
-     * @throws NoPermissionException
      */
     @RequestMapping("/updateUser")
-    @BussinessLog(value = "修改管理员", key = "account", dict = UserDict.class)
+    @BussinessLog(value = "修改用户", key = "account", dict = UserDict.class)
     @ResponseBody
-    public ResponseVO edit(@RequestParam("userName") String userName,@RequestParam("nickName") String nickName, @RequestParam("cardNo") String cardNo) throws NoPermissionException {
+    public ResponseVO updateUser(@Valid UserDto userDto) {
         //User oldUser = userService.selectById(user.getId());
        
-       // assertAuth(user.getId());
-        ShiroUser shiroUser = ShiroKit.getUser();
-        User oldUser = userService.selectById(shiroUser.getId());
-        oldUser.setName(userName);
-        oldUser.setNickName(nickName);
-        oldUser.setCardNo(cardNo);
+        // assertAuth(user.getId());
+        // ShiroUser shiroUser = ShiroKit.getUser();
+        User oldUser = userService.selectById(userDto.getId());
+        // 判断是否修改了密码
+        if (StringUtils.isNotEmpty(userDto.getPassword())) {
+            oldUser.setPassword(ShiroKit.md5(oldUser.getPassword(), oldUser.getSalt()));
+        }
+        oldUser.setName(userDto.getName());
+        oldUser.setNickName(userDto.getNickName());
+        oldUser.setRoleid(userDto.getRoleid());
+        oldUser.setPhone(userDto.getPhone());
+        oldUser.setEmail(userDto.getEmail());
+        oldUser.setCardNo(userDto.getCardNo());
+
         this.userService.updateById(oldUser);
         return new ResponseVO(0);
         
     }
 
     /**
-     * 删除管理员（逻辑删除）
+     * 修改用户余额
+     *
+     */
+    @RequestMapping("/updateUserBalance")
+    @BussinessLog(value = "修改用户余额", key = "account", dict = UserDict.class)
+    @ResponseBody
+    public ResponseVO updateUserBalance(@Valid UserDto userDto) {
+
+        User oldUser = userService.selectById(userDto.getId());
+
+        oldUser.setBalance(oldUser.getBalance().add(userDto.getPaySum())); // 更新余额
+        oldUser.setPaySum(oldUser.getPaySum().add(userDto.getPaySum())); // 充值金额
+
+        this.userService.updateById(oldUser);
+        return new ResponseVO(0);
+
+    }
+
+    /**
+     * 删除
+     *
+     * @param userId  用户id
+     * @param type    =1启动 =3删除
+     * @return
      */
     @RequestMapping("/mgr/delete")
     @BussinessLog(value = "删除管理员", key = "userId", dict = UserDict.class)
-    @Permission
     @ResponseBody
-    public ResponseData delete(@RequestParam Integer userId) {
+    public ResponseData delete(@RequestParam Integer userId, @RequestParam Integer type) {
         if (ToolUtil.isEmpty(userId)) {
             throw new ServiceException(BizExceptionEnum.REQUEST_NULL);
         }
@@ -268,7 +313,13 @@ public class UserMgrController extends BaseController {
             throw new ServiceException(BizExceptionEnum.CANT_DELETE_ADMIN);
         }
         assertAuth(userId);
-        this.userService.setStatus(userId, ManagerStatus.DELETED.getCode());
+
+        int flag = ManagerStatus.DELETED.getCode();
+        if (null != type && type == 1) {
+            flag = ManagerStatus.OK.getCode();
+        }
+
+        this.userService.setStatus(userId, flag);
         return SUCCESS_TIP;
     }
 
@@ -381,7 +432,7 @@ public class UserMgrController extends BaseController {
      * 判断当前登录的用户是否有操作这个用户的权限
      */
     private void assertAuth(Integer userId) {
-        if (ShiroKit.isAdmin()) {
+        /*if (ShiroKit.isAdmin()) {
             return;
         }
         List<Integer> deptDataScope = ShiroKit.getDeptDataScope();
@@ -391,7 +442,6 @@ public class UserMgrController extends BaseController {
             return;
         } else {
             throw new ServiceException(BizExceptionEnum.NO_PERMITION);
-        }
-
+        }*/
     }
 }

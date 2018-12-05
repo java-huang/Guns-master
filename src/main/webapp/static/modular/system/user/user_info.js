@@ -10,14 +10,14 @@ var UserInfoDlg = {
                     message: '账户不能为空'
                 }
             }
-        },
+        }/*,
         password: {
             validators: {
                 notEmpty: {
                     message: '密码不能为空'
                 }
             }
-        }
+        }*/
         
     }
 };
@@ -104,6 +104,14 @@ UserInfoDlg.set = function (key, value) {
 UserInfoDlg.collectData = function () {
      UserInfoDlg.set('id').set('account').set('password').set('roleid');
 };
+UserInfoDlg.editUserData = function () {
+    UserInfoDlg.set('id').set('account').set('password').set("name")
+        .set("nickName").set("roleid").set("phone").set("email")
+        .set("cardNo");
+};
+UserInfoDlg.userPayData = function () {
+    UserInfoDlg.set('id').set('paySum');
+};
 
 
 /**
@@ -140,29 +148,63 @@ UserInfoDlg.addSubmit = function () {
 };
 
 /**
+ * 修改用户余额
+ */
+UserInfoDlg.updateUserPay = function () {
+    this.clearData();
+    this.userPayData();
+
+    if (!this.validate()) {
+        return;
+    }
+    debugger
+    //提交信息
+    var ajax = new $ax(Feng.ctxPath + "/updateUserBalance", function (data) {
+        Feng.success("充值成功!");
+        window.parent.User.table.refresh();
+        UserInfoDlg.close();
+    }, function (data) {
+        Feng.error("充值失败!" + data.responseJSON.message + "!");
+    });
+    ajax.set(this.userInfoData);
+    ajax.start();
+};
+
+/**
  * 提交修改
  */
 UserInfoDlg.editSubmit = function () {
-
+debugger
     this.clearData();
-    this.collectData();
+    this.editUserData();
 
     if (!this.validate()) {
         return;
     }
 
-    //提交信息
-    var ajax = new $ax(Feng.ctxPath + "/mgr/add", function (data) {
-        Feng.success("修改成功!");
-        if (window.parent.User != undefined) {
-            window.parent.User.table.refresh();
-            UserInfoDlg.close();
-        }
-    }, function (data) {
-        Feng.error("修改失败!" + data.responseJSON.message + "!");
-    });
-    ajax.set(this.userInfoData);
-    ajax.start();
+    var operation = function () {
+        debugger
+        //提交信息
+        var ajax = new $ax(Feng.ctxPath + "/updateUser", function (data) {
+            Feng.success("修改成功!");
+            if (window.parent.User != undefined) {
+                window.parent.User.table.refresh();
+                UserInfoDlg.close();
+            }
+        }, function (data) {
+            Feng.error("修改失败!" + data.responseJSON.message + "!");
+        });
+        ajax.set(this.userInfoData);
+        ajax.start();
+    };
+
+    var pwd = $("#password").val();
+    if (pwd) {
+        Feng.confirm("确定修改密码为&nbsp;[&nbsp;<span style=\"color: red;\">" + pwd + "</span>&nbsp;]&nbsp;吗？", operation);
+    } else {
+        operation();
+    }
+
 };
 
 /**

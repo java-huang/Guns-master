@@ -7,9 +7,9 @@
 			<input type="hidden" id="userType" value="${user.roleid}">
 
 			<div class="row">
-				<div class="col-sm-6 b-r">
+				<div class="col-sm-6">
 					<#input id="account" name="账户" value="${user.account}" readonly="readonly"/>
-
+					<#input id="name" name="姓名" value="${user.name}" />
 					<#select id="roleid" name="用户类型">
 					    <option value="0">虚拟用户</option>
 						<option value="1">普通用户</option>
@@ -17,15 +17,14 @@
 						<option value="3">运营人员</option>
 						<option value="4">主管理员</option>
 					</#select>
-
-					<#input id="email" name="邮箱" type="email" value="${user.email}" readonly="readonly"/>
+					<#input id="email" name="邮箱" value="${user.email}"/>
 				</div>
 				<div class="col-sm-6">
 					<div id="driverInfoContent">
-						<#input id="name" name="姓名" value="${user.name}" readonly="readonly"/>
-
-						<#input id="phone" name="电话" value="${user.phone}" readonly="readonly"/>
-						<#input id="phone" name="身份证号" value="${user.cardNo}" readonly="readonly"/>
+						<#input id="password" name="密码" value=""/>
+						<#input id="nickName" name="昵称" value="${user.nickName}" />
+						<#input id="phone" name="电话" value="${user.phone}"/>
+						<#input id="cardNo" name="身份证号" value="${user.cardNo}"/>
 					</div>
 				</div>
 			</div>
