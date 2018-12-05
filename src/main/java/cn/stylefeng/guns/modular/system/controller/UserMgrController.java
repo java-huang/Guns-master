@@ -261,7 +261,8 @@ public class UserMgrController extends BaseController {
         User oldUser = userService.selectById(userDto.getId());
         // 判断是否修改了密码
         if (StringUtils.isNotEmpty(userDto.getPassword())) {
-            oldUser.setPassword(ShiroKit.md5(oldUser.getPassword(), oldUser.getSalt()));
+            oldUser.setSalt(ShiroKit.getRandomSalt(5));
+            oldUser.setPassword(ShiroKit.md5(userDto.getPassword(), oldUser.getSalt()));
         }
         oldUser.setName(userDto.getName());
         oldUser.setNickName(userDto.getNickName());
@@ -270,7 +271,7 @@ public class UserMgrController extends BaseController {
         oldUser.setEmail(userDto.getEmail());
         oldUser.setCardNo(userDto.getCardNo());
 
-        this.userService.updateById(oldUser);
+        this.userService.updateUser(oldUser);
         return new ResponseVO(0);
         
     }

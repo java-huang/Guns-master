@@ -10,14 +10,14 @@ var UserInfoDlg = {
                     message: '账户不能为空'
                 }
             }
-        }/*,
+        },
         password: {
             validators: {
-                notEmpty: {
+                notEmpty: {d
                     message: '密码不能为空'
                 }
             }
-        }*/
+        }
         
     }
 };
@@ -28,9 +28,6 @@ var UserInfoDlg = {
 UserInfoDlg.clearData = function () {
     this.userInfoData = {};
 };
-
-
-
 
 /**
  * 关闭此对话框
@@ -157,7 +154,6 @@ UserInfoDlg.updateUserPay = function () {
     if (!this.validate()) {
         return;
     }
-    debugger
     //提交信息
     var ajax = new $ax(Feng.ctxPath + "/updateUserBalance", function (data) {
         Feng.success("充值成功!");
@@ -174,16 +170,10 @@ UserInfoDlg.updateUserPay = function () {
  * 提交修改
  */
 UserInfoDlg.editSubmit = function () {
-debugger
     this.clearData();
     this.editUserData();
 
-    if (!this.validate()) {
-        return;
-    }
-
     var operation = function () {
-        debugger
         //提交信息
         var ajax = new $ax(Feng.ctxPath + "/updateUser", function (data) {
             Feng.success("修改成功!");
@@ -194,7 +184,7 @@ debugger
         }, function (data) {
             Feng.error("修改失败!" + data.responseJSON.message + "!");
         });
-        ajax.set(this.userInfoData);
+        ajax.set(UserInfoDlg.userInfoData);
         ajax.start();
     };
 

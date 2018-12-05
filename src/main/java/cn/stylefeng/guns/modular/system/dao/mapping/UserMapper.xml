@@ -91,12 +91,16 @@
     <update id="updateUser" parameterType="cn.stylefeng.guns.modular.system.model.User">
         update sys_user
         <set>
-            <if test="name != null">`name` = #{name}, </if>
-            <if test="nickName != null">`nick_name` = #{nickName}, </if>
-            <if test="cardNo != null">`card_no` = #{cardNo}, </if>
-            <if test="roleid != null">`roleid` = #{roleid}, </if>
-            <if test="isLogin != null">`is_login` = #{isLogin}, </if>
-            <if test="loginTime != null">`login_time` = #{loginTime}, </if>
+            <if test="password != null and password != ''">password = #{password}, </if>
+            <if test="salt != null and salt != ''">salt = #{salt}, </if>
+            <if test="name != null and name != ''">name = #{name}, </if>
+            <if test="nickName != null and nickName != ''">nick_name = #{nickName}, </if>
+            <if test="roleid != null and roleid != ''">roleid = #{roleid}, </if>
+            <if test="phone != null and phone != ''">phone = #{phone}, </if>
+            <if test="email != null and email != ''">email = #{email}, </if>
+            <if test="cardNo != null and cardNo != ''">card_no = #{cardNo}, </if>
+            <if test="isLogin != null and isLogin != ''">is_login = #{isLogin}, </if>
+            <if test="loginTime != null">login_time = #{loginTime}, </if>
         </set>
         where id = #{id}
     </update>
