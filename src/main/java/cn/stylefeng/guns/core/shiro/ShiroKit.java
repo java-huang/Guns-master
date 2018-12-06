@@ -24,10 +24,8 @@ import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
-import org.apache.shiro.util.CollectionUtils;
 
 import java.util.List;
-import java.util.Objects;
 
 /**
  * shiro工具类
@@ -272,9 +270,6 @@ public class ShiroKit {
      */
     public static boolean isAdmin() {
         List<Integer> roleList = ShiroKit.getUser().getRoleList();
-        if (CollectionUtils.isEmpty(roleList)) {
-            return false;
-        }
         for (Integer integer : roleList) {
             String singleRoleTip = ConstantFactory.me().getSingleRoleTip(integer);
             if (singleRoleTip.equals(Const.ADMIN_NAME)) {

@@ -19,7 +19,9 @@ import cn.stylefeng.guns.core.shiro.ShiroKit;
 import cn.stylefeng.guns.core.shiro.ShiroUser;
 import cn.stylefeng.guns.core.util.JwtTokenUtil;
 import cn.stylefeng.guns.modular.system.dao.UserMapper;
+import cn.stylefeng.guns.modular.system.model.News;
 import cn.stylefeng.guns.modular.system.model.User;
+import cn.stylefeng.guns.modular.system.service.INewsService;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.roses.core.reqres.response.ErrorResponseData;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
@@ -32,8 +34,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 接口控制器提供
@@ -42,7 +47,6 @@ import java.util.HashMap;
  * @Date 2018/7/20 23:39
  */
 @RestController
-@RequestMapping("/gunsApi")
 public class ApiController extends BaseController {
 
     @Autowired
@@ -91,5 +95,16 @@ public class ApiController extends BaseController {
         return SUCCESS_TIP;
     }
 
+    @Autowired
+	private INewsService newsService;
+	
+	@RequestMapping( "/index")
+    public ModelAndView  index(){
+		ModelAndView mav = new ModelAndView("index");
+		Map<String, Object> paraMap = new HashMap<>();
+		List<News> newsList = newsService.selectNews(paraMap);
+		mav.addObject("newsList",newsList);
+        return mav;
+    }
 }
 

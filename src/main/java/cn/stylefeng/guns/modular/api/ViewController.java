@@ -5,16 +5,13 @@ import static cn.stylefeng.roses.core.util.HttpContext.getIp;
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import cn.stylefeng.guns.core.log.LogManager;
 import cn.stylefeng.guns.core.log.factory.LogTaskFactory;
 import cn.stylefeng.guns.core.shiro.ShiroKit;
@@ -23,11 +20,6 @@ import cn.stylefeng.roses.core.base.controller.BaseController;
 
 @Controller
 public class ViewController extends BaseController{
-	@RequestMapping( "/index")
-    public String index(){
-        return "/index.html";
-    }
-
     @RequestMapping( "/register/**")
     public String problem(){
         return "/register.html";
@@ -53,10 +45,7 @@ public class ViewController extends BaseController{
         return "/gcdt/kjgg.html";
     }
     
-    @RequestMapping( "/news")
-    public String zxlb(){
-        return "/gcdt/zxlb.html";
-    }
+    
     
     @RequestMapping( "/helper")
     public String helper(){
@@ -68,15 +57,15 @@ public class ViewController extends BaseController{
         return "/bzzx/"+detail+".html";
     }
     
-    @RequestMapping( "/account")
-    public String grzx(){
-        return "/personal/grzx.html";
-    }
-    
     
     @RequestMapping( "/account/{detail}")
     public String grzx(@PathVariable("detail") String detail){
-        return "/personal/"+detail+".html";
+    	 if (ShiroKit.isAuthenticated() || ShiroKit.getUser() != null) {
+    		 return "/personal/"+detail+".html";
+    	 }else {
+    		 return "/login.html";
+    	 }
+    	 
     }
     /**
      * 跳转到登录页面
@@ -84,7 +73,7 @@ public class ViewController extends BaseController{
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() {
         if (ShiroKit.isAuthenticated() || ShiroKit.getUser() != null) {
-            return "/index.html";
+            return "/index";
         } else {
             return "/login.html";
         }

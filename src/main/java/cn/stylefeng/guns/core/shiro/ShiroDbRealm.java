@@ -32,7 +32,6 @@ import org.apache.shiro.subject.PrincipalCollection;
 
 import java.util.HashSet;
 import java.util.List;
-import java.util.Objects;
 import java.util.Set;
 
 public class ShiroDbRealm extends AuthorizingRealm {
@@ -62,7 +61,7 @@ public class ShiroDbRealm extends AuthorizingRealm {
         Set<String> permissionSet = new HashSet<>();
         Set<String> roleNameSet = new HashSet<>();
 
-        roleList.stream().filter(Objects::nonNull).forEach(roleId -> {
+        for (Integer roleId : roleList) {
             List<String> permissions = shiroFactory.findPermissionsByRoleId(roleId);
             if (permissions != null) {
                 for (String permission : permissions) {
@@ -73,7 +72,7 @@ public class ShiroDbRealm extends AuthorizingRealm {
             }
             String roleName = shiroFactory.findRoleNameByRoleId(roleId);
             roleNameSet.add(roleName);
-        });
+        }
 
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         info.addStringPermissions(permissionSet);
